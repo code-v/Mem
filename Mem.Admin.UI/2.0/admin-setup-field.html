@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Archive  首页展示</title>
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<!-- <link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css"> -->
+
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+<style>
+	body{
+		background:url(img/webui/bg/macbg.png);	
+	}
+
+    #mainWrapper{
+        background:#fff;
+
+    }
+
+
+    #setupMenu{
+      min-height:600px;
+    }
+    
+
+    .thumbnails {
+        color:white;
+        text-align:center;
+
+    }
+
+
+</style>
+
+
+</head>
+
+<body style="padding-top:40px;">
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">SmartArchive</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="index.html"><i class="icon-home icon-white"></i> 首页</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="menus.html"><i class="icon-file icon-white"></i> 文件</a></li>
+              <li><a href="lists.html"><i class="icon-book icon-white"></i> 档案</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="colors.html"><i class="icon-magnet icon-white"></i> 利用</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="forms.html"><i class="icon-hdd icon-white"></i> 库房</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="buttons.html"><i class="icon-adjust icon-white"></i> 统计分析</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">消息日志 <span class="badge badge-important">8</span></a></li>
+              
+
+              <li class="active"><a href="wedgits.html">我的空间</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">欢迎： sindtom</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="toolbar bg-metal bordered">
+            <div class="span2"><h2><strong>文件库设置</strong></h2></div>
+
+            <div class="span10 btn-toolbar margin0-t ">
+                <div class="btn-group">
+                   <a href="#" class="btn btn-primary" id="btn-quickAdd"><i class="icon-plus icon-white"></i>&nbsp;快速添加</a>
+                   <a href="#modal" class="btn" id="btn-add" data-toggle="modal"><i class="icon-plus"></i>&nbsp;添加</a>
+                   <a href="#" class="btn"><i class="icon-plus"></i>&nbsp;从模板添加</a>
+                </div>
+
+                <div class="btn-group">
+                   <a href="#" class="btn"><i class="icon-gift"></i>&nbsp;另存为模板</a>
+                   <a href="#" class="btn"><i class="icon-file"></i>&nbsp;管理模板</a>
+                  
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+            <div class=" bg-white shadowed">
+            <div class="span2" >
+                
+                    
+                    
+                        <div class="menubar menubar-large bordered-r" id="setupMenu"> 
+                             <ul class="vmenu"> 
+                                <li class="active"><a href="#"><i class="icon-th-list icon-white"></i>&nbsp;字段</a></li>
+                                <li ><a href="#"><i class="icon-flag"></i>&nbsp;界面</a></li>
+                                <li> <a href="#"><i class="icon-filter"></i>&nbsp;分类导航</a></li>
+                                
+                                <li><a href="#"><i class="icon-print"></i>&nbsp;报表</a></li>
+                                <li><a href="#"><i class="icon-picture"></i>&nbsp;附件</a></li>
+                                <li><a href="#"><i class="icon-inbox"></i>&nbsp;归档映射</a></li>
+                                <li><a href="#"><i class="icon-cog">&nbsp;</i>高级</a></li>
+
+                               
+                            </ul>
+                        
+                    
+                        </div>
+                
+              </div>   
+
+            
+            <div class="span10">
+              <div class="margin20-r">
+                 <form action="#" class="well form-inline margin20-t hide" id="quickAdd">
+                    
+                    <label for="name">字段</label>
+                    <input id="name" type="text" class="input-mini margin5-r">
+                    <label for="name">英文名</label>
+                    <input id="name" type="text" class="input-mini margin5-r">
+                    <label for="name">类型</label>
+                    <select id="name" class="input-mini margin5-r">
+                       <option value="string">字符</option>
+                       <option value="int">数字</option>
+                       <option value="date">日期</option>
+                       <option value="text">大文本</option>
+                    </select>
+                    <label for="name">长度</label>
+                    <input id="name" type="text" class="input-mini margin5-r">
+                    <label for="name">字典</label>
+                    <select id="name" class="input-mini margin5-r">
+                       <option value=""></option>
+                       <option value="int"></option>
+                       <option value="date"></option>
+                       <option value="text"></option>
+                    </select>
+                    &nbsp;
+                    <button class="btn btn-primary" type="submit">提交</button>&nbsp;
+                    <button class="btn" id="cancelAdd">取消</button>
+
+                 </form>
+
+                <table class="table table-striped" border="0" cellspacing="0" cellpadding="0">
+                  <thead>
+                    <tr>
+                      <th>字段</th>
+                      <th>英文名</th>
+                      <th>类型</th>
+                      <th>长度</th>
+                      <th>顺序</th>
+                      <th width="140">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      
+                      <td>登记号</td>
+                      <td>djh</td>
+                      <td>字符</td>
+                      <td>50</td>
+                      <td>1</td>
+                      <td>
+                        <a href="#modal" data-toggle="modal" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                     <tr>
+                      
+                      <td>年度</td>
+                      <td>nd</td>
+                      <td>数字</td>
+                      <td>8</td>
+                      <td>2</td>
+                      <td>
+                        <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>文件标题</td>
+                      <td>wjbt</td>
+                      <td>字符</td>
+                      <td>200</td>
+                      <td>3</td>
+                      <td>
+                        <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>责任者</td>
+                      <td>zrz</td>
+                      <td>字符</td>
+                      <td>100</td>
+                      <td>4</td>
+                      <td>
+                        <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>文号</td>
+                      <td>wh</td>
+                      <td>字符</td>
+                      <td>100</td>
+                      <td>5</td>
+                      <td>
+                        <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>分类号</td>
+                      <td>flh</td>
+                      <td>字符</td>
+                      <td>100</td>
+                      <td>6</td>
+                      <td>
+                        <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                        <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                      </td>
+                    </tr>
+                   
+                  </tbody>
+                </table>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="modal hide fade" id="modal">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">x</button>
+                <h3>添加字段</h3>
+              </div>
+              <div class="modal-body">
+                  <form action="#" class="form-horizontal">
+                     <fieldset>
+                       <legend>基础信息</legend>
+                       <div class="control-group">
+                           <label for="name" class="control-label">字段</label>
+                           <div class="controls">
+                                <input type="text">
+                           </div> 
+                       </div>
+                       <div class="control-group">
+                           <label for="name" class="control-label">英文名</label>
+                           <div class="controls">
+                                <input type="text">
+                           </div> 
+                       </div>
+                       <div class="control-group">
+                           <label for="name" class="control-label">类型</label>
+                           <div class="controls">
+                               
+                                  <select>
+                                     <option value="">字符串</option>
+                                     <option value=""></option>
+                                     <option value=""></option>
+                                     <option value=""></option>
+                                  </select>
+                                  
+                                
+                                
+                           </div> 
+                       </div>
+
+                       <div class="control-group">
+                           <label for="name" class="control-label">长度</label>
+                           <div class="controls">
+                                <input type="text">
+                           </div> 
+                       </div>
+
+                       
+                       
+                     </fieldset>
+
+                     <fieldset>
+                       <legend>高级信息</legend>
+                       <div class="control-group">
+                          <label for="name" class="control-label">数据字典</label> 
+                          <div class="controls">
+                            <label for="" class="checkbox">
+                                <input type="checkbox">关联&nbsp;&nbsp;
+                            </label>
+                            
+                          </div>
+
+                       </div>
+                       <div class="control-group">
+                          <label for="" class="control-label"></label>
+                          <div class="controls">
+                            <select name="ab" id="">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                              </select>
+                          </div>
+                       </div>
+
+                       <div class="control-group">
+                         <label for="" class="control-label">空值处理</label>
+                         <div class="controls"><select name="" id="">
+                             <option value="">不处理</option>
+                             <option value=""></option>
+                             <option value=""></option>
+                             <option value=""></option>
+                           </select></div>
+                       </div>
+
+                       <div class="control-group">
+                         <label for="" class="control-label">字段规则</label>
+                         <div class="controls">
+
+                           <div class="inline">
+                             <input type="text">
+                             <a href="" class="btn">自定义</a>
+                           </div>
+                         </div>
+                       </div>
+                     </fieldset>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                 <a href="#" class="btn btn-primary"  >&nbsp;保存&nbsp; </a>
+                 <a href="#" class="btn" data-dismiss="modal">取消</a>
+              </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    
+	<script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+      (function(){
+
+         $('#btn-quickAdd').on('click',function(e){
+             e.preventDefault();
+             $('#quickAdd').slideToggle();
+         });
+
+         $('#cancelAdd').on('click',function(e){
+            $('#quickAdd').slideUp()[0].reset();
+         });
+
+         
+      })();
+  </script>
+</body>
+</html>

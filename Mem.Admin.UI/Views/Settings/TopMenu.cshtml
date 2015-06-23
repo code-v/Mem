@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Mem.Admin.UI.Models.Settings.SiteMenuModel>
+@{
+    ViewBag.Title = "TopMenu";
+    Layout = null;
+}
+@foreach (var info in Model)
+{
+    <li><a href="javascript:void(0)" onclick="LoadSecondMenu(@info.Id)">@info.Name</a></li>
+}

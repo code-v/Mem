@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Archive  首页展示</title>
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+<style>
+	body{
+		background:url(img/webui/bg/macbg.png);	
+	}
+
+    #mainWrapper{
+        background:#fff;
+
+    }
+
+    
+
+    .thumbnails {
+        color:white;
+        text-align:center;
+
+    }
+
+
+</style>
+
+
+</head>
+
+<body style="padding-top:40px;">
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">SmartArchive</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="index.html">首页</a></li>
+              <li><a href="menus.html">文件管理</a></li>
+              <li><a href="lists.html">档案管理</a></li>
+              <li><a href="colors.html">档案利用</a></li>
+              <li><a href="forms.html">库房管理</a></li>
+              <li><a href="buttons.html">统计分析</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">消息中心 <span class="badge badge-important">8</span></a></li>
+              
+
+              <li class="active"><a href="wedgits.html">我的空间</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">欢迎： sindtom</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container bg-white">
+    	<header>
+             <img src="img/demo/banner.jpg"/>
+            <div class="menubar menubar-darker">
+                <ul class="menu">
+                    <li><a href="#"><i class="icon-adjust icon-white"></i>&nbsp;空间首页&nbsp;</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">&nbsp;我的借阅</a></li>
+                    <li><a href="#"><i class="icon-heart icon-white"></i> 我的收藏</a></li>
+                    <li><a href="#"><i class="icon-envelope icon-white"></i> 消息栏</a></li>
+                    <li><a href="#"> 空间设置</a></li>
+
+                    
+                </ul>
+                
+             </div>   
+            <section class="row">
+                
+                <div class="span12">
+                  <div class="margin20"> 
+                    <ul class="nav nav-tabs"> 
+                        <li class="active"><a href="#">全部</a></li>
+                        <li ><a href="#">文书档案</a></li>
+                        <li ><a href="#">科技档案</a></li>
+                        <li ><a href="#">基建档案</a></li>
+
+                    </ul>
+                     <div class="pull-right">
+                        <a href="#" class="btn btn-primary"><i class="icon-search icon-white"></i>查询</a>
+                        &nbsp;&nbsp;<a href="#">高级查询</a>&nbsp;&nbsp;或&nbsp;&nbsp;<a href="#">自定义</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><a href="#" class="link-gray">帮助</a></small>
+                    </div>
+                    <input type="text" placeholder="查找" style="width:620px;height:15px;"> 
+
+                  </div>  
+                </div>
+            </section>
+           
+        </header>
+
+        <div class="row" id="content">
+            <div class="span8">
+                <div class="panel  margin20" >
+                    <header>
+                        
+                        <h2><strong>最新消息</strong><small> &nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-success">3</span> <a href="#">审批信息</a>&nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-warning">2</span> <a href="#">借阅消息</a>&nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-info">3</span> <a href="#">个人消息</a> </small></h2>
+                        
+                    </header>
+                    <div class="pcontent">
+                        <ul class="vlist">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5>jeffery way 刚刚提交了1份借阅&nbsp;&nbsp;&nbsp;<a href="#"><span class="label label-info">点击查看</span></a> </h5>
+                                    <p>2011年12月 11日 14:20</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5>Nick carter 昨天登记提交了5条文书档案&nbsp;&nbsp;&nbsp;<a href="#"><span class="label label-info">点击查看</span></a> </h5>
+                                    <p>2011年12月 10日  15:28 </p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5>Nick 昨天给你发送1条短消息&nbsp;&nbsp;&nbsp;<a href="#"><span class="label label-info">点击查看</span></a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+                 
+
+
+                <div class="panel  margin20" >
+                    <header>
+                        
+                        <h2><strong>我的应用</strong></h2>
+                        
+                    </header>
+                    <div class="pcontent bg-noise">
+                        
+                        
+                        <ul class="list-icon list-condense">
+                            <li><a href="#"><img src="img/demo/ico/48/nav_photostream_icon.png" /><div>发文登记</div></a>
+                            </li>
+                            <li><a href="#"><img src="img/demo/ico/48/nav_icon_safari.png"/><div>文书管理</div></a></li>
+                            <li><a href="#"><img  src="img/demo/ico/48/overview_calendar_icon.jpg"/><div>日志查询</div></a></li>
+                            <li><a href="#"><img   src="img/demo/ico/48/ibooks_icon copy.jpg"/><div>专题浏览</div></a></li>
+                            <li><a href="#"><img src="img/demo/ico/48/nav_photostream_icon.png" /><div>发文登记</div></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+               
+
+                <div class="panel  margin20" >
+                    <header>
+                        <a href="#" class="btn btn-alpha pull-right"><i class="icon-th"></i>更多...</a>
+                        <h2><strong>我的收藏</strong></h2>
+
+                        
+                    </header>
+                    <div class="pcontent bg-wood-lighter pad10 shadowed-large">
+                        
+                        
+                        <ul class="thumbnails  thumbnails-alpha margin20-t ">
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt="" class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>   
+                                </div>
+                            </li>
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt=""  class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt=""  class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt=""  class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>   
+                                </div>
+                            </li>
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt=""  class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="span1">
+                                <div class="thumbnail">
+                                    <img src="img/demo/thumb-arc.jpg" alt=""  class="shadowed-large">
+                                    <div class="caption">
+                                        <h5>档案标题</h5>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="span4">
+                <div class="panel" id="sidebar">
+                    
+                    <div class="pcontent rounded" style="padding:20px;">
+                        
+                        
+                        <h4 class="margin20-tb">系统公告</h4>
+                        <ul class="vlist  font14">
+                                <li><a href="#" class="link-important">系统升级2.0通知</a></li>
+                                <li><a href="#">请尽快安装最新插件</a></li>
+                                <li><a href="#">五一放假安排</a></li>
+                        </ul> 
+
+                        <h4 class="margin20-tb">最近浏览的档案</h4>
+                        <ul class="vlist  font14">
+                                <li><a href="#">[文书]关于网络硬件升级计划</a></li>
+                                <li><a href="#">[基建]办公楼室内管道施工图</a></li>
+                                <li><a href="#">[基建]南区照明系统说明</a></li>
+                        </ul>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+	
+
+</body>
+</html>

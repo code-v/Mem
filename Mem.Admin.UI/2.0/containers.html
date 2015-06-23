@@ -1,0 +1,591 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Containers WebUI 2.0</title>
+
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body style="padding-top:50px;"  >
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          
+          <a class="brand" href="http://code.google.com/webui-framework">WebUI FrameWork</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">OverView</a></li>
+              <li><a href="menus.html">Menus</a></li>
+              <li><a href="lists.html">Lists</a></li>
+              <li><a href="colors.html">Colors</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="buttons.html">Tables</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">Wedgits</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">WelCome WebUI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  <div class="container" > 
+  	  <section class="row" id="breadcrumbMain">
+      		<div class="span12">
+                <ul class="breadcrumb">
+                  <li>
+                    <a href="#">首页</a> <span class="divider">/</span>
+                  </li>
+                  <li>
+                    <a href="#">图书馆</a> <span class="divider">/</span>
+                  </li>
+                  <li class="active">
+                    <a href="#">数据</a>
+                  </li>
+                </ul>
+        	</div>
+       </section>
+       
+      <section id="normalPanels" class=" bg-wood margin20-b">
+     	 <div class="row pad20-tb ">
+        	<div class="span3 offset1">	
+                <div class="panel panel-large panel-bordered">
+                	<header><h2> 大型面板</h2></header>
+                    <div class="pcontent">
+                    	<ul class="vlist">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Plugins</a></li>
+                            <li><a href="#">Suggest</a></li>
+                            <li><a href="#">Support Forum</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#">WordPress Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="span4">	
+                <div class="panel panel-bordered">
+                	<header>
+                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus"></i>添加</a>
+                        <h2>面板<small> &nbsp;描述信息...</small></h2>
+                    	
+                    </header>
+                    <div class="pcontent">
+                    	<ul class="list">
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb4-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb4-small.jpg"/></a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="span3">	
+                <div class="panel panel-small panel-bordered shadowed-large margin10-b bg-gray">
+                	<header>
+                    
+                    	<div class="pull-right btn-group"> 
+                            <a href="#" class="btn btn-alpha"><i class="icon-plus"></i></a>
+                            <a href="#" class="btn btn-alpha"><i class="icon-print"></i></a>
+                        </div>
+                    	<h2><i class="icon-heart"></i> 小型面板</h2>
+                    
+                    </header>
+                    <div class="pcontent ">
+                    	<ul class="vlist">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5><a href="#">Show me the meaning of Being Longly</a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>
+                    	<a href="#" class="btn btn-alpha pull-right">按钮</a><a href="#" class="btn btn-alpha pull-right">查找</a>
+                    </footer>
+                </div>
+                
+                <div class="panel panel-mini shadowed-large  panel-bordered  margin10-b bg-silver">
+	                	 <header>
+	                    	<i class="icon-info-sign pull-right"></i>
+	                    	<h2>迷你面板</h2>		                    
+	                     </header>
+	                    <div class="pcontent">
+	                    	<ul class="vlist ">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5><a href="#">Show me the meaning of Being Longly</a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+	                    </div>	
+                 </div>
+                
+                
+            </div>
+            
+            
+        
+        
+        
+        </div>
+        
+        <div class="row pad20-tb">
+        	<div class="span3 offset1">	
+                <div class="panel panel-darker panel-small  margin10-b">
+                	<header>
+                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+                        <h2><i class="icon-heart icon-white"></i> 黑色面板</h2>
+                    </header>
+                    <div class="pcontent bg-black">
+                    	<ul class="vlist vlist-white" >
+                            <li><i  class="icon-book icon-white"></i> <a href="#">Documentation</a></li>
+                            <li><i  class="icon-asterisk icon-white"></i> <a href="#">Plugins</a></li>
+                            <li><i  class="icon-edit icon-white"></i> <a href="#">Suggest</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="panel panel-darker panel-small">
+                	
+                    <div class="pcontent bg-black rounded">
+                    	<ul class="vlist vlist-white">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb4-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5><a href="#">Show me the meaning of Being Longly</a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+            
+             <div class="span4">
+        			<div class="panel panel-darker panel-bordered  margin10-b">
+	                	<header>
+	                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus-sign icon-white"></i> 添加</a>
+	                        <h2><i class="icon-heart icon-white"></i> 黑色面板</h2>
+	                    </header>
+	                    <div class="pcontent">
+	                    	<ul class="vlist" >
+	                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+	                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+	                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+	                        </ul>
+	                    </div>	
+                    
+                	</div>
+       		 </div>
+       		 
+       		 <div class="span3">
+        		<div class="panel panel-mini panel-darker ">
+                	<header>
+	                    	<i class="icon-info-sign icon-white pull-right"></i>                    
+	                </header>
+                    <div class="pcontent bg-black">
+                    	<ul class="list">
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg"/></a></li>
+                        </ul>
+                         
+                    </div>
+                    
+                </div>
+       		 </div>
+       		 
+       		 
+       		 
+            
+        </div>
+        
+        <div class="row pad20-tb">
+		        	<div class="span2 offset1">
+		        		<div class="panel panel-primary panel-bordered  margin10-b">
+			                	<header>
+			                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+			                        <h2><i class="icon-heart icon-white"></i> 蓝色面板</h2>
+			                    </header>
+			                    <div class="pcontent">
+			                    	<ul class="vlist" >
+			                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+			                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+			                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+			                        </ul>
+			                    </div>	
+		                    
+		                	</div>
+		        	</div>
+		        	
+		        	<div class="span2">
+		        		<div class="panel panel-info panel-bordered  margin10-b">
+			                	<header>
+			                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+			                        <h2><i class="icon-heart icon-white"></i> 青色面板</h2>
+			                    </header>
+			                    <div class="pcontent">
+			                    	<ul class="vlist" >
+			                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+			                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+			                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+			                        </ul>
+			                    </div>	
+		                    
+		                	</div>
+		        	</div>
+		        
+		        	<div class="span2">
+		        		<div class="panel panel-success panel-bordered  margin10-b">
+			                	<header>
+			                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+			                        <h2><i class="icon-heart icon-white"></i> 绿色面板</h2>
+			                    </header>
+			                    <div class="pcontent">
+			                    	<ul class="vlist" >
+			                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+			                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+			                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+			                        </ul>
+			                    </div>	
+		                    
+		                	</div>
+		        	</div>
+		        	
+		        	<div class="span2">
+		        		<div class="panel panel-danger panel-bordered  margin10-b">
+			                	<header>
+			                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+			                        <h2><i class="icon-heart icon-white"></i> 红色面板</h2>
+			                    </header>
+			                    <div class="pcontent">
+			                    	<ul class="vlist" >
+			                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+			                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+			                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+			                        </ul>
+			                    </div>	
+		                    
+		                	</div>
+		        	</div>
+		        	
+		        	<div class="span2">
+		        		<div class="panel panel-warning panel-bordered  margin10-b">
+			                	<header>
+			                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus icon-white"></i></a>
+			                        <h2><i class="icon-heart icon-white"></i> 橙色面板</h2>
+			                    </header>
+			                    <div class="pcontent">
+			                    	<ul class="vlist" >
+			                            <li><i  class="icon-book "></i> <a href="#">Documentation</a></li>
+			                            <li><i  class="icon-asterisk "></i> <a href="#">Plugins</a></li>
+			                            <li><i  class="icon-edit "></i> <a href="#">Suggest</a></li>
+			                        </ul>
+			                    </div>	
+		                    
+		                	</div>
+		        	</div>
+		</div>
+        
+       
+     
+     </section>
+         
+  	  <section id="pagePanel1" class="row margin20-b">
+        	<div class="panel panel-large panel-bordered span12">
+            	<header class="margin10-b">
+                	
+                		<a class="btn btn-alpha pull-right">&nbsp; <i class="icon-plus"></i> 添加 &nbsp;</a>
+                    	<a class="btn btn-alpha pull-right"><i class="icon-search"></i></a>
+                        <form class="pull-right"><input type="text" class="search-query" placeholder="查找"></form>
+                	<h2>Page Header 面板<small>&nbsp; 用于整个页面的大标题面板</small></h2>
+                </header>
+                <div class="pcontent">
+                	<div id="dataFilters" class="well" >
+                    	<dl class="list">
+                        	<dt>年度</dt>
+                            <dd><a href="#">2003</a></dd>
+                            <dd><a href="#">2004</a></dd>
+                            <dd class="active"><a href="#">2005</a></dd>
+                            <dd><a href="#">2006</a></dd>
+                            <dd><a href="#">2007</a></dd>
+
+                        </dl>
+                        <div class="clearfix"></div>
+                        
+                        <dl class="list">
+                        	<dt>保管期限</dt>
+                            <dd><a href="#">长期</a></dd>
+                            <dd><a href="#">永久</a></dd>
+                            <dd><a href="#">短期</a></dd>
+                            <dd class="active"><a href="#">10年</a></dd>
+                            <dd><a href="#">30年</a></dd>
+                        </dl>
+                       
+                    </div>
+                    
+                    <table border="0" cellspacing="0" cellpadding="0" class="table table-striped">
+                          <thead>	
+                               <tr>
+                                 <th width="8%" scope="col">序号&nbsp;</th>
+                                 <th width="44%" scope="col">标题&nbsp;</th>
+                                 <th width="11%" scope="col">分类&nbsp;</th>
+                                 <th width="17%" scope="col">主题词&nbsp;</th>
+                                 <th width="20%" scope="col">操作&nbsp;</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>
+                                   <a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图)</a></li>
+                                 </td>
+                                 <td>国内</td>
+                                 <td>央视，企业</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>2</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                    <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>3</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                     <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>4</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                 <td>地方</td>
+                                 <td>&nbsp;</td>
+                                 <td>
+                                     <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                     <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                 </td>
+                             </tr>
+                         </tbody>
+                       </table>
+                       
+                       <div class="pagination pull-right ">
+                          <ul>
+                          	<li><a href="#">首页</a></li>
+                            
+                            <li class="active">
+                              <a href="#">1</a>
+                            </li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li class="disabled"><a href="#">...</a></li>
+                            <li><a href="#">末页</a></li>
+                          </ul>
+					</div>
+                </div>
+                <footer></footer>
+            </div>
+        </section>
+        
+      <section id="pagePanel2" class="row margin20-b">
+        	
+                <div class="panel  panel-bordered panel-darker span12" >
+                    <header>
+                        <div class="pull-right btn-group"> 
+                            <a href="#" class="btn btn-alpha"><i class="icon-plus icon-white"></i> 添加</a>
+                            <a href="#" class="btn btn-alpha"><i class="icon-print icon-white"></i> 打印</a>
+                        </div>
+                        <h2>Page Header 面板<small>&nbsp; 也可以用于显示页面的大标题面板</small></h2>
+                    </header>
+                    
+                    <div class="pbody"> 
+                        <aside class="menubar">
+                                            <ul class="vmenu"> 
+                                                <li class="vmenu-header">菜单分类</li>
+                                                <li class="active"><a href="#">回到首页</a></li>
+                                                <li> <a href="#">看看软件</a></li>
+                                                <li><a href="#">浏览项目&nbsp;&nbsp;<small>返回到首页...</small></a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">home</a></li>
+                                                <li><a href="#">软件</a></li>
+                                                <li><a href="#">项目</a></li> 
+                                            </ul>
+                                        
+                       </aside>
+                       <div class="pcontent">
+                       		<table border="0" cellspacing="0" cellpadding="0" class="table table-striped">
+                          <thead>	
+                               <tr>
+                                 <th width="8%" scope="col">序号&nbsp;</th>
+                                 <th width="44%" scope="col">标题&nbsp;</th>
+                                 <th width="11%" scope="col">分类&nbsp;</th>
+                                 <th width="17%" scope="col">主题词&nbsp;</th>
+                                 <th width="20%" scope="col">操作&nbsp;</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>
+                                   <a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图)</a></li>
+                                 </td>
+                                 <td>国内</td>
+                                 <td>央视，企业</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                                  </td>
+                             </tr>
+                             <tr>
+                                 <td>2</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                    <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i></a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>3</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                     <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i></a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>4</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                 <td>地方</td>
+                                 <td>&nbsp;</td>
+                                 <td>
+                                     <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                     <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>5</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                    <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i></a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>6</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                     <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i></a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>7</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                 <td>地方</td>
+                                 <td>&nbsp;</td>
+                                 <td>
+                                     <a href="#" class="btn"><i class="icon-edit"></i></a>
+                                     <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i></a>
+                                 </td>
+                             </tr>
+                         </tbody>
+                       </table>
+                       </div> 
+                    </div>
+                     
+                   
+                </div>
+            
+        </section>
+ 		
+        
+    
+     
+
+    <footer style="margin:40px 0 50px 0;padding:20px 0;border-top:1px solid #e5e5e5;">
+    	<p class="pull-right"><a href="#">返回顶端</a></p>
+        <p><a href="http://code.google.com/webui-framework">WebUI Framework 2.0</a> Designed For Developers Thanks For Twitter Bootstrap Framework </p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    </footer>
+    
+    
+  </div>   
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+
+    
+    <script type="text/javascript">
+    	
+		$(function(){
+			prettyPrint();
+		});
+    
+    </script>
+    
+</body>
+</html>
+ 

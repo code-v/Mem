@@ -1,0 +1,9 @@
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Service.dll
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Service.pdb
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Core.dll
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Data.dll
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Core.pdb
+E:\mem\Memory\Mem.Service\bin\Release\Mem.Data.pdb
+E:\mem\Memory\Mem.Service\obj\Release\Mem.Service.csprojResolveAssemblyReference.cache
+E:\mem\Memory\Mem.Service\obj\Release\Mem.Service.dll
+E:\mem\Memory\Mem.Service\obj\Release\Mem.Service.pdb

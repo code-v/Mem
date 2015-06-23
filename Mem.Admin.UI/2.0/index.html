@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index WebUI 2.0</title>
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+<style>
+	body{
+		background:url(img/demo/lakebg.jpg);	
+	}
+	#carouselPanel{
+		
+		height:600px;
+	}
+	
+	#dock{
+		
+		height:100px;
+		width:100%;
+		position:fixed;
+		bottom:0;
+		
+		overflow:hidden;
+	
+	}
+	
+	#dockPanel{
+		width:580px;
+		margin-left:auto;
+		margin-right:auto;	
+		text-align:center;
+	}
+	
+	
+#shelf, #left_shelf, #right_shelf {
+    float:left;
+    height: 100px;
+}
+
+#left_shelf, #right_shelf {
+    width: 30px;
+}
+
+#menu_dashboard {
+	display: inline-block;
+	width: 500px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+
+#menu_dashboard li {
+	width: auto;
+	height: auto;
+	float:left;
+	bottom: 0;
+	vertical-align: bottom;
+}
+
+#menu_dashboard li.separator {
+	width: 50px;
+	height: 105px;
+}
+
+#menu_dashboard li a {
+	display: block;
+	height: 100px;
+	width: 80px;
+	position: relative;
+	
+    -webkit-transition-property: width, height;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: width, height;
+    -o-transition-duration: 0.5s;
+    -moz-transition-property: width, height;
+    -moz-transition-duration: 0.5s;
+}
+
+#menu_dashboard li a:hover {
+	width: 100px;
+	height: 100px;
+}
+
+
+
+#menu_dashboard li a img {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: none;
+}
+
+#left_shelf { 
+	background: url(img/demo/dock/left_shelf.png) no-repeat bottom ;
+}
+
+#right_shelf { 
+	background: url(img/demo/dock/right_shelf.png) no-repeat  bottom; 
+}
+
+#shelf {  
+	background:url(img/demo/dock/shelf.png) repeat-x  bottom; 
+}
+
+
+
+li.separator { 
+	background: url(img/demo/dock/separator.png) no-repeat bottom; 
+}
+
+</style>
+
+
+</head>
+
+<body style="padding-top:40px;">
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">WebUI FrameWork</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">OverView</a></li>
+              <li><a href="menus.html">Menus</a></li>
+              <li><a href="lists.html">Lists</a></li>
+              <li><a href="colors.html">Colors</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="buttons.html">Tables</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">Wedgits</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">WelCome WebUI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container">
+    	<section>
+            <div class="row">
+        		
+                	<header id="appTitle" style="text-align:center;margin:0 auto;padding:10px;">
+                    	<h1 style="color:#fff;">Welcome To WebUI FrameWork</h1>
+                    </header>
+            </div> 
+            
+            <div class="row pad20-tb">
+        	<div class="span8 ">	
+                <div class="panel panel-bordered margin10-b" >
+                	<header>
+                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus"></i>添加</a>
+                        
+                    	
+                    </header>
+                    <div class="pcontent">
+                    	
+                        
+                        <ul class="list-icon">
+                            <li><a href="#"><img src="img/demo/ico/48/nav_photostream_icon.png" /><div>应用</div></a></li>
+                            <li><a href="#"><img src="img/demo/ico/48/nav_icon_safari.png"/><div>互联网</div></a></li>
+                            <li><a href="#"><img  src="img/demo/ico/48/overview_calendar_icon.jpg"/><div>日历</div></a></li>
+                            <li><a href="#"><img   src="img/demo/ico/48/ibooks_icon copy.jpg"/><div>图书</div></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                 <div class="panel panel-bordered" >
+                	<header>
+                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-plus"></i>添加</a>
+                        
+                    	
+                    </header>
+                    <div class="pcontent bg-noise">
+                    
+                    	<ul class="vlist  font14">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Plugins</a></li>
+                            <li><a href="#">Suggest</a></li>
+                            <li><a href="#">Support Forum</a></li>
+                            <li><a href="#">Themes</a></li>
+                            <li><a href="#">WordPress Blog</a></li>
+                        </ul> 
+                       
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+ 
+            
+            <div class="span3">	
+                
+                
+                <div class="panel panel-small panel-bordered margin10-b shadowed-large">
+                	
+                    <div class="pcontent rounded" style="padding-top:10px;">
+                        <a href="#" class="btn btn-alpha pull-right"><i class="icon-search"></i></a>
+                    	<input type="text" placeholder="查找" style="width:75%;height:15px;">
+                    </div>
+                    
+                </div>
+                
+                <div class="panel panel-mini panel-darker panel-alpha margin10-b ">
+                	<header>
+	                   <i class="icon-info-sign icon-white pull-right"></i>                    
+	                </header>
+                    <div class="pcontent bg-black">
+                    	<ul class="list">
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg"/></a></li>
+                        </ul>
+                         
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="panel panel-small panel-bordered shadowed-large margin10-b bg-gray">
+                	<header>
+                    
+                    	<div class="pull-right btn-group"> 
+                            <a href="#" class="btn btn-alpha"><i class="icon-plus"></i></a>
+                            <a href="#" class="btn btn-alpha"><i class="icon-print"></i></a>
+                        </div>
+                    	
+                    
+                    </header>
+                    <div class="pcontent ">
+                    	<ul class="vlist">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5><a href="#">Show me the meaning of Being Longly</a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>
+                    	<a href="#" class="btn btn-alpha pull-right">按钮</a><a href="#" class="btn btn-alpha pull-right">查找</a>
+                    </footer>
+                </div>
+                
+                <div class="panel panel-mini shadowed-large  panel-bordered  margin10-b bg-silver">
+	                	 <header>
+	                    	<i class="icon-info-sign pull-right"></i>
+	                    	               
+	                     </header>
+	                    <div class="pcontent">
+	                    	<ul class="vlist ">
+                            <li>
+                                <a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg" /></a> 
+                                <div class="text">
+                                    <h5><a href="#">Show me the meaning of Being Longly</a> </h5>
+                                    <p>2011年12月 by Sind</p>
+                                </div>
+                               <div class="clearfix"></div>
+                            </li>
+                        </ul>
+	                    </div>	
+                 </div> 
+            </div>
+        </div>
+            
+            
+        </section>
+    </div>
+    <div id="dock">
+       <div id="dockPanel">
+                <div id="left_shelf"></div>
+                <div id="shelf">
+                    <ul id="menu_dashboard">
+                        <li><a href="#" title="Apple"><img src="img/demo/ico/apple.png" alt="Apple" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/home.png" alt="Home" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/safari.png" alt="Safari" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/tools.png" alt="Tools" /></a></li>
+                        <li class="separator">&nbsp;</li>
+                        <li><a href="#"><img src="img/demo/ico/harddrive.png" alt="harddrive" /></a></li>
+                    </ul>
+                </div>
+            	<div id="right_shelf"></div> 
+                
+       </div>                   	
+    </div>
+	
+
+</body>
+</html>

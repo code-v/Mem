@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Mem.Admin.UI.Models.Settings.SiteMenuModel>
+@{
+    ViewBag.Title = "SiteMenuList";
+    Layout = "~/Views/Shared/_right.cshtml";
+}
+
+<table border="0" cellspacing="0" cellpadding="0" class="table table-striped">
+    <thead>
+        <tr>
+            <th width="39%" scope="col">菜单名</th>
+            <th width="44%" scope="col">链接URL</th>
+            <th width="17%" scope="col">操作&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var info in Model)
+        {
+            <tr>
+                <td>
+                    @info.Name
+                </td>
+                <td>@info.SrcUrl</td>
+                <td>
+                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                    <a href="javascript:void(0)" onclick="DeleteMenu(@info.Id)" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="blank1"></div>
+
+<script type="text/javascript">
+
+    /*
+     *删除一条菜单选项
+     */
+    function DeleteMenu(id) {
+        $.ajax({
+            type: 'POST',
+            url: '/Settings/DeleteMenu',
+            async: true,
+            dataType: 'json',
+            data: "id=" + id,
+            success: function (data) {
+                if (!data.Result) {
+                    alert(data.msg);
+                }
+                else {
+                    parent.location.reload();
+                }
+            },
+            error: function (ex) {
+                alert('操作错误..' + ex);
+            }
+        });
+    }
+
+</script>
+
+@*<div class="row">
+    <div class="span6">
+        <div class="dataTables_info" id="dataTable1_info">显示 1 / 6 总共 9 记录</div>
+    </div>
+    <div class="span6">
+        <div class="dataTables_paginate paging_bootstrap pagination">
+            <ul>
+                <li class="prev disabled"><a href="#">上一页</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li class="next"><a href="#">下一页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>*@

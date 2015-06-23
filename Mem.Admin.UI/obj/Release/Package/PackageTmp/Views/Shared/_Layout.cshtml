@@ -1,0 +1,57 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/prettify.css" rel="stylesheet" type="text/css">
+    <link href="/css/webui.css" rel="stylesheet" type="text/css">
+    <link href="/css/data-tables.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/webui-admin.css">
+
+    <script src="~/Script/jquery-1.7.2.min.js"></script>
+    <script src="/Script/js/html5.js"></script>
+
+    <style>
+        body
+        {
+            background: #ccc;
+        }
+    </style>
+
+
+</head>
+<body style="padding-top: 40px;">
+    <header class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="http://code.google.com/webui-framework">RS管理系统</a>
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        @Html.Action("TopMenu", "Settings")
+                        <li class="divider-vertical"></li>
+                        <li><a href="wedgits.html">消息中心<span class="badge badge-important">8</span></a></li>
+                        <li class="active"><a href="wedgits.html">我的空间</a></li>
+
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li><a href="#">欢迎： sindtom</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

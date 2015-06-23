@@ -1,0 +1,8 @@
+﻿Group: Shipping Method
+FriendlyName: Yuantong
+SystemName: Shipping.Yuantong
+Version: 1.09
+SupportedVersions: 2.80
+Author: MemCommerce team
+DisplayOrder: 3
+FileName: MVCPlugin.Plugin.Shipping.Yuantong.dll

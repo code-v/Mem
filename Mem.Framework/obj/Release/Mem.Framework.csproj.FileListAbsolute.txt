@@ -1,0 +1,11 @@
+E:\mem\Memory\Mem.Framework\bin\Release\Mem.Framework.dll
+E:\mem\Memory\Mem.Framework\bin\Release\Mem.Framework.pdb
+E:\mem\Memory\Mem.Framework\bin\Release\Autofac.dll
+E:\mem\Memory\Mem.Framework\bin\Release\Autofac.Integration.Mvc.dll
+E:\mem\Memory\Mem.Framework\bin\Release\Mem.Core.dll
+E:\mem\Memory\Mem.Framework\bin\Release\Newtonsoft.Json.dll
+E:\mem\Memory\Mem.Framework\bin\Release\Mem.Core.pdb
+E:\mem\Memory\Mem.Framework\bin\Release\Newtonsoft.Json.xml
+E:\mem\Memory\Mem.Framework\obj\Release\Mem.Framework.csprojResolveAssemblyReference.cache
+E:\mem\Memory\Mem.Framework\obj\Release\Mem.Framework.dll
+E:\mem\Memory\Mem.Framework\obj\Release\Mem.Framework.pdb

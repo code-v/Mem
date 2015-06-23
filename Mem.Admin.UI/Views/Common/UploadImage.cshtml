@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "UploadImage";
+}
+<div id="uploadImageView">
+    <script src="/Uploadify/jquery.uploadify.min.js"></script>
+    <link href="/Uploadify/uploadify.css" rel="stylesheet" />
+
+    <div id="queue"></div>
+    <input id="file_upload" name="file_upload" type="file" multiple="false">
+    <input type="hidden" id="ImageUrl" name="ImageUrl" value="@ViewBag.Url" />
+
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('#file_upload').uploadify({
+                'buttonText': '选择图片',
+                'fileTypeExts': '*.jpg;*.png;*.jpeg;*.gif',
+                'swf': '/Uploadify/uploadify.swf',
+                'uploader': '/Common/UploadImageInfo',
+                'onUploadSuccess': function (file, data, response) {
+                    var obj = eval('(' + data + ')');
+                    if (obj.Result) {
+                        $("#ImageUrl").val(obj.data);
+                    }
+                    else {
+                        alert("上传失败");
+                    }
+                }
+            });
+        });
+	</script>
+</div>

@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Archive  首页展示</title>
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+<style>
+	body{
+		background:url(img/webui/bg/macbg.png);	
+	}
+	#carouselPanel{
+		
+		height:600px;
+	}
+
+    #msgBoard{
+        text-align:center;
+        padding: 20px 0 0 0;
+        height:300px;
+    }
+
+    #sidebar{
+        height:530px;
+
+    }
+	
+	#dock{
+		
+		height:100px;
+		width:100%;
+		position:fixed;
+		bottom:0;
+		overflow:hidden;
+	
+	}
+	
+	#dockPanel{
+		width:580px;
+		margin-left:auto;
+		margin-right:auto;	
+		text-align:center;
+	}
+	
+	
+#shelf, #left_shelf, #right_shelf {
+    float:left;
+    height: 100px;
+}
+
+#left_shelf, #right_shelf {
+    width: 30px;
+}
+
+#menu_dashboard {
+	display: inline-block;
+	width: 500px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+
+#menu_dashboard li {
+	width: auto;
+	height: auto;
+	float:left;
+	bottom: 0;
+	vertical-align: bottom;
+}
+
+#menu_dashboard li.separator {
+	width: 50px;
+	height: 105px;
+}
+
+#menu_dashboard li a {
+	display: block;
+	height: 100px;
+	width: 80px;
+	position: relative;
+	
+    -webkit-transition-property: width, height;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: width, height;
+    -o-transition-duration: 0.5s;
+    -moz-transition-property: width, height;
+    -moz-transition-duration: 0.5s;
+}
+
+#menu_dashboard li a:hover {
+	width: 100px;
+	height: 100px;
+}
+
+
+
+#menu_dashboard li a img {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: none;
+}
+
+#left_shelf { 
+	background: url(img/demo/dock/left_shelf.png) no-repeat bottom ;
+}
+
+#right_shelf { 
+	background: url(img/demo/dock/right_shelf.png) no-repeat  bottom; 
+}
+
+#shelf {  
+	background:url(img/demo/dock/shelf.png) repeat-x  bottom; 
+}
+
+
+
+li.separator { 
+	background: url(img/demo/dock/separator.png) no-repeat bottom; 
+}
+
+</style>
+
+
+</head>
+
+<body style="padding-top:40px;">
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">SmartArchive</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">首页</a></li>
+              <li><a href="menus.html">文件管理</a></li>
+              <li><a href="lists.html">档案管理</a></li>
+              <li><a href="colors.html">档案利用</a></li>
+              <li><a href="forms.html">库房管理</a></li>
+              <li><a href="buttons.html">统计分析</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">消息中心 <span class="badge badge-important">8</span></a></li>
+              
+
+              <li><a href="wedgits.html">我的空间</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">欢迎： sindtom</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="container">
+    	<section>
+            <div class="row">
+        		
+                	<header id="appTitle" style="text-align:center;margin:0 auto;padding:10px;">
+                    	<h1>SmartArchive综合档案管理系统</h1>
+                    </header>
+            </div> 
+            
+            <div class="row pad5-tb">
+        	<div class="span8 ">	
+                <div class="panel panel-bordered margin10-b shadowed" >
+                	<header>
+                    	<a href="#" class="btn btn-alpha pull-right"><i class="icon-asterisk"></i>设置</a>
+                        <h2>快捷操作<small> &nbsp;可将常用的操作添加到主页方便操作...</small></h2>
+                    	
+                    </header>
+                    <div class="pcontent">
+                    	
+                        
+                        <ul class="list-icon">
+                            <li><a href="#"><img src="img/demo/ico/48/nav_photostream_icon.png" /><div>发文登记</div></a></li>
+                            <li><a href="#"><img src="img/demo/ico/48/nav_icon_safari.png"/><div>文书管理</div></a></li>
+                            <li><a href="#"><img  src="img/demo/ico/48/overview_calendar_icon.jpg"/><div>日志查询</div></a></li>
+                            <li><a href="#"><img   src="img/demo/ico/48/ibooks_icon copy.jpg"/><div>专题浏览</div></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+                 <div class="panel panel-bordered shadowed" >
+                	<header>
+                       <h2>档案概况<small> &nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-success">3</span> <a href="#">审批信息</a>&nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-warning">2</span> <a href="#">借阅消息</a>&nbsp;&nbsp;&nbsp;
+                        <span class="badge badge-info">3</span> <a href="#">个人消息</a> </small></h2>
+                    	
+                    </header>
+                    <div class="pcontent" id="msgBoard">
+                        
+                    	<img src="img/demo/chart.jpg"/>
+                       
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+ 
+            
+            <aside class="span3">
+                <div class="panel panel-small panel-bordered shadowed" id="sidebar">
+                	
+                    <div class="pcontent rounded" style="padding:20px;">
+                        <h4 class="margin20-b">档案检索</h4>                        
+                        <a href="#" class="btn btn-alpha pull-right"><i class="icon-search"></i></a>
+                    	<input type="text" placeholder="查找" style="width:70%;height:15px;">
+
+                        <h4 class="margin20-tb">最近访问用户</h4>
+                        <ul class="list">
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb1-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb5-small.jpg"/></a></li>
+                            <li><a href="#" class="thumb"><img src="img/demo/thumb3-small.jpg"/></a></li>
+                        </ul>
+                        <h4 class="margin20-tb">系统公告</h4>
+                        <ul class="vlist  font14">
+                                <li><a href="#">系统升级2.0通知</a></li>
+                                <li><a href="#">请尽快安装最新插件</a></li>
+                                <li><a href="#">五一房间安排</a></li>
+                        </ul> 
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+                
+               
+            </aside>
+        </div>
+            
+            
+        </section>
+    </div>
+    <div id="dock">
+       <div id="dockPanel">
+                <div id="left_shelf"></div>
+                <div id="shelf">
+                    <ul id="menu_dashboard">
+                        <li><a href="#" title="Apple"><img src="img/demo/ico/apple.png" alt="Apple" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/home.png" alt="Home" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/safari.png" alt="Safari" /></a></li>
+                        <li><a href="#"><img src="img/demo/ico/tools.png" alt="Tools" /></a></li>
+                        <li class="separator">&nbsp;</li>
+                        <li><a href="#"><img src="img/demo/ico/harddrive.png" alt="harddrive" /></a></li>
+                    </ul>
+                </div>
+            	<div id="right_shelf"></div> 
+                
+       </div>                   	
+    </div>
+	
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@model Mem.Admin.UI.Models.Settings.SiteMenuModel
+@{
+    ViewBag.Title = "EditSiteMenu";
+    Layout = "~/Views/Shared/_right.cshtml";
+}
+<div id="example" class="k-content">
+    <form id="tickets">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <h3>修改菜单</h3>
+        <ul>
+            <li>
+                <label for="Name" class="required">菜单名</label>
+                <input type="text" id="Name" name="Name" value="@Model.Name" class="k-textbox" placeholder="菜单名" required validationmessage="请输入菜单名" />
+            </li>
+
+            <li>
+                <label for="ParentId" class="required">父菜单</label>
+                <select name="ParentId" id="ParentId" required data-required-msg="请选择开始时间" style="width: 300px">
+                    <option value="0">--根目录--</option>
+                    @foreach (var info in Model.DDSiteMenuList)
+                    {
+                        if (info.Id == Model.ParentId)
+                        {
+                        <option value="@info.Id" selected="selected">@info.Name</option>
+                        }
+                        else
+                        {
+                        <option value="@info.Id" >@info.Name</option> 
+                        }
+                    }
+                </select>
+                <span class="k-invalid-msg" data-for="parentMenu"></span>
+            </li>
+
+            <li>
+                <label for="SrcUrl" class="required">菜单链接(URL)</label>
+                <input type="text" id="SrcUrl" name="SrcUrl" value="@Model.SrcUrl" class="k-textbox" placeholder="菜单URL" required validationmessage="请输入菜单链接" />
+            </li>
+
+            <li>
+                <label for="Content" class="required">菜单描述</label>
+                <textarea class="k-textbox" id="Content" name="Content" style="height: 40px;" class="k-textbox">@Model.Content</textarea>
+            </li>
+            <li>
+                <label for="menuContent" class="required">图片上传</label>
+                <div style="margin-left: 100px; margin-top: -20px">
+                    @Html.Action("UploadImage", "Common", new { ImageUrl = @Model.ImageUrl })
+                </div>
+            </li>
+
+            <li class="accept">
+                <button class="k-button" type="submit">提交</button> <span style="margin-left:60px;"></span> <button class="k-button" onclick="ToUrl('/Settings/SiteMenuList')" type="button">返回</button>
+            </li>
+            <li class="status"></li>
+        </ul>
+    </form>
+</div>
+<script>
+    $(document).ready(function () {
+        var data = [
+        "12 Angry Men",
+        "Il buono, il brutto, il cattivo.",
+        "Inception",
+        "One Flew Over the Cuckoo's Nest",
+        "Pulp Fiction",
+        "Schindler's List",
+        "The Dark Knight",
+        "The Godfather",
+        "The Godfather: Part II",
+        "The Shawshank Redemption"
+        ];
+
+        $("#search").kendoAutoComplete({
+            dataSource: data,
+            separator: ", "
+        });
+
+        $("#ParentId").kendoDropDownList({
+        });
+
+        $("#amount").kendoNumericTextBox();
+
+        var validator = $("#tickets").kendoValidator().data("kendoValidator"),
+        status = $(".status");
+
+        $("#tickets").submit(function (event) {
+            event.preventDefault();
+            if (validator.validate()) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/Settings/UpdateSiteMenuInfo',
+                    async: true,
+                    dataType: 'json',
+                    data: $("#tickets").serialize(),
+                    success: function (data) {
+                        if (data.Result) {
+                            alert(data.msg);
+                            parent.location.reload();
+                        }
+                        else {
+                            alert(data.msg);
+                        }
+                    },
+                    error: function (ex) {
+                        alert('操作错误..' + ex);
+                    }
+                });
+            } else {
+                status.text("Oops! There is invalid data in the form.")
+                    .removeClass("valid")
+                    .addClass("invalid");
+            }
+        });
+    });
+</script>
+
+
+

@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Archive  首页展示</title>
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/data-tables.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="css/webui-admin.css">
+
+<style>
+	body{
+		background:#ccc;	
+	}
+
+</style>
+
+
+</head>
+
+<body style="padding-top:40px;">
+
+	<header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">综合档案管理系统</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li ><a href="index.html">首页</a></li>
+              <li><a href="menus.html">文件管理</a></li>
+              <li><a href="lists.html">档案管理</a></li>
+              <li><a href="colors.html">档案利用</a></li>
+              <li><a href="forms.html">库房管理</a></li>
+              <li><a href="buttons.html">统计分析</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">消息中心<span class="badge badge-important">8</span></a></li>
+              <li class="active"><a href="wedgits.html">我的空间</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">欢迎： sindtom</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="container-admin container-vbar">
+        <div class="sidebar">
+                <div class="vbar bg-gray-darker">
+                    <ul class="toolbar-stacked" id="toolbarMain" >
+                        <li ><a href="#"><img src="img/demo/ico/32/icon_1.png" alt=""><p>基建档案</p></a></li>
+                        <li class="active"><a href="#"><img src="img/demo/ico/32/icon_2_h.png" alt=""><p>文书档案</p></a></li>
+                        <li><a href="#"><img src="img/demo/ico/32/icon_3.png" alt=""><p>人事档案</p></a></li>
+                        <li><a href="#"><img src="img/demo/ico/32/icon_4.png" alt=""><p>财务档案</p></a></li>
+                        <li><a href="#"><img src="img/demo/ico/32/icon_3.png" alt=""><p>人事档案</p></a></li>
+
+                    </ul>
+                </div>
+
+                <div class="content bg-mac">
+                    <div class="toolbar bordered-b">
+                        <h2>档案管理</h2>
+                    </div>
+                    
+                    <aside class="menubar menubar-alpha" >
+                        <ul class="vmenu" > 
+                            <li><a href="#">1921年-1949年</a></li>
+                            <li class="active"> <a href="#">1949年-1960年</a><i class="arrow"></i></li>
+                            <li><a href="#">1961年-1985年</a></li>
+                            <li><a href="#">扩声设备的合同及附件</a></li>
+                        </ul>
+                   </aside>
+               </div>
+               
+
+        </div>        
+        <div class="main bg-white">
+                    
+                    <div class="toolbar bg-mac bordered-b"  >
+
+                        <div class="btn-toolbar">
+                        
+                             <div class="pull-right">
+                                <a href="#" class="btn"><i class="icon-th-list"></i></a>
+                                <a href="#" class="btn"><i class="icon-th-large"></i></a>&nbsp;
+                                <a href="#" class="btn"><i class="icon-wrench"></i>&nbsp;设置</a>&nbsp;
+                                <a href="#" class="btn">帮助</a>
+
+                             </div>
+
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary"><i class="icon-plus icon-white"></i> 添 加 </a>
+                            </div>
+                            
+                            <div class="btn-group">
+                                <a href="#" class="btn"><i class="icon-search"></i>查询 </a>
+                                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">自定义查询</a></li>
+                                   
+                                </ul>
+
+                            </div>
+                            
+                            <div class="btn-group">
+                                    
+                                    <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">批量操作 
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">编辑</a></li>
+                                        <li><a href="#">删除</a></li>
+                                        <li><a href="#">分类</a></li>
+                                        <li><a href="#">标引主题词</a></li>
+                                    </ul>
+                                    
+                            </div>
+                            <div class="btn-group ">
+                                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">其它  <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">添加到专题</a></li>
+                                    <li><a href="#">打印报表</a></li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="btn-group">
+                                <a href="#" class="btn "><i class="icon-folder-close "></i>归档</a>
+                                
+                            </div>
+
+                           
+                        </div>    
+                            
+                    </div>
+
+                    <div class="content">
+
+                        <table border="0" cellspacing="0" cellpadding="0" class="table table-striped" id="dataTable1">
+                              <thead>   
+                                   <tr>
+                                     <th width="20" scope="col"><input type="checkbox"/>&nbsp;</th>
+                                     <th width="45" scope="col">登记号</th>
+                                     <th width="65" scope="col">状态</th>
+                                     <th scope="col">标题&nbsp;</th>
+                                     <th width="60" scope="col">分类&nbsp;</th>
+                                     <th width="120" scope="col">主题词&nbsp;</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>1</td>
+                                     <td><span class="text-gray"><i class="icon-status icon-status-success"></i>&nbsp;已归档</span></td>
+                                     <td>
+                                       <div class="font-large"><a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图),郑州巡防队阻止志愿者下水救人</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div>
+                                     </td>
+                                     <td>国内</td>
+                                     <td>央视，企业</td>
+                                     
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>2</td>
+                                     <td><span class="text-gray"><i class="icon-status icon-status-success"></i>&nbsp;已归档</span></td>
+                                     <td>
+                                        <div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div>
+                                    </td>
+                                     <td>社会</td>
+                                     <td>郑州，志愿者</td>
+                                     
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>3</td>
+                                      <td><span class="text-gray"><i class="icon-status icon-status-important"></i>&nbsp;退回</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>4</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>5</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>社会</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>6</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>7</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>4</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>5</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>社会</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>6</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><div class="font-large"><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></div>
+                                       <div class="row-footer">
+                                           <div class="pull-left">
+                                               程国丽   2012-11-12
+                                           </div>
+                                           <div class="row-action invisible pull-right">
+                                                <a href="#" class="link-success" >查看</a>&nbsp; | &nbsp;
+                                                <a href="#" class="link-info">快速编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" >编辑</a>&nbsp; | &nbsp;
+                                                <a href="#" class="red">删除</a>
+                                           </div>
+                                       </div></td>
+                                     <td>地方</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>7</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>4</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>5</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                     <td>社会</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>6</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                     <td>地方</td>
+                                     <td>郑州，志愿者</td>
+                                 </tr>
+                                   <tr>
+                                     <td><input type="checkbox"></td>
+                                     <td>7</td>
+                                      <td><span class="text-gray"><i class="icon-status"></i>&nbsp;待审核</span></td>
+                                     <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                     <td>地方</td>
+                                     <td>&nbsp;</td>
+                                 </tr>
+                             </tbody>
+                        </table>
+                                    
+                        
+                    </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script type="text/javascript" src="js/dataTables.js"></script>
+   
+
+
+    <script type="text/javascript">
+        (function() {
+           $('#dataTable1').dataTable({ 
+                'sDom': '<"top"if<"dd">""<"clear">>rt<"bottom"ipl<"clear">>',
+                'iDisplayLength': 10,
+                'bAutoWidth': false,
+                'bInfo': true,
+                'sPaginationType': 'full_numbers',
+                'aoColumnDefs': [{ 'bSortable': false, 'aTargets': [ 0,4 ] }],
+                'oLanguage': {
+                    'sLengthMenu': '每页显示 _MENU_ 记录',
+                    'sSearch': '过滤',
+                    'sZeroRecords': '抱歉，暂无数据',
+                    //'sInfo': '当前显示 _START_ - _END_ 总共 _TOTAL_ 记录',
+                    'sInfo': ' 共 _TOTAL_ 记录',
+                    'sInfoEmpty': '当前显示 0 / 0 共 0 记录',
+                    'sInfoFiltered': '(从 _MAX_ 条记录过滤)',
+                    'oPaginate': {
+                        'sFirst': '首页',
+                        'sLast': '末页',
+                        'sNext': '下页',
+                        'sPrevious': '上页'
+                    }
+                   
+                }
+            }); 
+
+
+           $("#dataTable1 tr").mousemove(function(){
+                $(".row-action",this).css("visibility","visible");  
+            });
+            $("#dataTable1 tr").mouseout(function(){
+                $(".row-action",this).css("visibility","hidden");   
+            });
+
+        })();
+    </script>
+    
+	
+
+</body>
+</html>

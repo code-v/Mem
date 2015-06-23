@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Script/jquery-1.7.2.min.js"></script>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        this is a index page.
+
+        Shipping Methods:
+        <ul>
+            @if (ViewData["ShippingMethods"] != null)
+            {
+                foreach (var item in ViewData["ShippingMethods"] as List<Mem.Plugin.IShippingMethod>)
+                {
+                <li>
+                    @Html.ActionLink(item.PluginDescriptor.SystemName, "ShippingMethod", "Home", new { method = item.PluginDescriptor.SystemName }, new { })
+                </li>
+                }
+            }
+        </ul>
+        <ul>
+            @{ 
+                foreach (var item in Model)
+                { 
+                <li>测试名：@item.Name</li> 
+                } 
+            }
+        </ul>
+    </div>
+    <script type="text/javascript">
+        function GetPeople() {
+            $.ajax({
+                type: 'POST',
+                url: '/Home/MyTest',
+                async: true,
+                dataType: 'html',
+                success: function (data) {
+                    alert("OK");
+                    //$("#people").html(data);
+                },
+                error: function () {
+                    alert('操作错误..');
+                }
+            });
+        }
+
+        GetPeople();
+
+    </script>
+</body>
+</html>

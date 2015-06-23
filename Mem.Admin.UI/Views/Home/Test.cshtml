@@ -1,0 +1,21 @@
+﻿@model AdminMemory.Models.Catalog.CategoryModel
+@{
+    ViewBag.Title = "Test";
+}
+<script src="~/Script/jquery-1.7.2.min.js"></script>
+<script src="~/Script/jquery.validate.min.js"></script>
+<script src="~/Script/CCNF/CCNF.Ajax.js"></script>
+<form id="test">
+    @Html.TextBoxFor(m => m.Name)
+    <input type="submit" value="保存" />
+</form>
+<script>
+    $("#test").validate({
+        submitHandler: function (form) {
+            $.CCNF.ajaxForm("/Home/Test", $(form).serialize(), function (msg) {
+
+            });
+        },
+       
+    })
+</script>

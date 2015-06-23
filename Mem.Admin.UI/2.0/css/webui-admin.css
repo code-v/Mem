@@ -1,0 +1,66 @@
+
+
+
+
+.container-admin .sidebar{
+	
+}
+
+
+
+.container-vbar  .vbar{
+	width:60px;
+	top:41px;
+	left:0;
+	bottom:0;
+	position: absolute;
+	z-index:30;
+	overflow: auto;
+	border-right:1px solid #aaa;
+}
+
+.container-vbar .vbar .toolbar-stacked{
+	z-index:40;
+}
+
+
+
+.container-vbar .sidebar{
+	width:240px;
+}
+
+.container-vbar .sidebar .content{
+	position: absolute;
+	width:160px;
+	left:61px;
+	bottom:0;
+	top:41px;
+	z-index:20;
+	border-left:1px solid #f2f2f2;
+}
+
+.container-vbar .sidebar .vmenu li a{
+	padding-left:10px;
+}
+
+
+.container-vbar .main{
+	position: absolute;
+	top:41px;
+	left:221px;
+	right:0;
+	bottom:0;
+	overflow: hidden;
+
+}
+
+.container-vbar .main .content{
+	overflow: auto;
+	padding: 10px;
+	position: absolute;
+	top:50px;
+	right:0;
+	left:0;
+	bottom:0;
+}
+

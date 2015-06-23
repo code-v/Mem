@@ -1,0 +1,918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41C718D1-F7DA-42D9-AF46-4209B755838C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mem.Admin.UI</RootNamespace>
+    <AssemblyName>Mem.Admin.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\Memory\bin\Autofac.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\Memory\bin\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\Memory\bin\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\..\..\MVC\Memory\Memory\bin\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.1\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Memory\bin\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\Memory\bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
+    <Compile Include="EmbeddedViews\EmbeddedResourceVirtualFile.cs" />
+    <Compile Include="EmbeddedViews\EmbeddedViewMetadata.cs" />
+    <Compile Include="EmbeddedViews\EmbeddedViewResolver.cs" />
+    <Compile Include="EmbeddedViews\EmbeddedViewTable.cs" />
+    <Compile Include="EmbeddedViews\EmbeddedViewVirtualPathProvider.cs" />
+    <Compile Include="EmbeddedViews\IEmbeddedViewResolver.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Infrastructure\ITypeFinder.cs" />
+    <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
+    <Compile Include="Models\Catalog\CategoryModel.cs" />
+    <Compile Include="Models\Common\ResultSet.cs" />
+    <Compile Include="Models\Settings\AuthoritiesClassfyModel.cs" />
+    <Compile Include="Models\Settings\AuthoritiesModel.cs" />
+    <Compile Include="Models\Settings\SiteMenuModel.cs" />
+    <Compile Include="Models\ShippingMethodModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="2.0\admin-file-list.html" />
+    <Content Include="2.0\admin-setup-field.html" />
+    <Content Include="2.0\backgrounds.html" />
+    <Content Include="2.0\containers.html" />
+    <Content Include="2.0\css\bootstrap-responsive.css" />
+    <Content Include="2.0\css\bootstrap-responsive.min.css" />
+    <Content Include="2.0\css\bootstrap.css" />
+    <Content Include="2.0\css\bootstrap.min.css" />
+    <Content Include="2.0\css\data-tables.css" />
+    <Content Include="2.0\css\prettify.css" />
+    <Content Include="2.0\css\webui-admin.css" />
+    <Content Include="2.0\css\webui-menus.css" />
+    <Content Include="2.0\css\webui.css" />
+    <Content Include="2.0\example.html" />
+    <Content Include="2.0\img\datatable\back_disabled.jpg" />
+    <Content Include="2.0\img\datatable\back_enabled.jpg" />
+    <Content Include="2.0\img\datatable\favicon.ico" />
+    <Content Include="2.0\img\datatable\forward_disabled.jpg" />
+    <Content Include="2.0\img\datatable\forward_enabled.jpg" />
+    <Content Include="2.0\img\datatable\sort_asc.png" />
+    <Content Include="2.0\img\datatable\sort_asc_disabled.png" />
+    <Content Include="2.0\img\datatable\sort_both.png" />
+    <Content Include="2.0\img\datatable\sort_desc.png" />
+    <Content Include="2.0\img\datatable\sort_desc_disabled.png" />
+    <Content Include="2.0\img\demo\banner.jpg" />
+    <Content Include="2.0\img\demo\chart.jpg" />
+    <Content Include="2.0\img\demo\dock\left_shelf.png" />
+    <Content Include="2.0\img\demo\dock\right_shelf.png" />
+    <Content Include="2.0\img\demo\dock\separator.png" />
+    <Content Include="2.0\img\demo\dock\shelf.png" />
+    <Content Include="2.0\img\demo\ico\128\Address-Book.png" />
+    <Content Include="2.0\img\demo\ico\128\Book.png" />
+    <Content Include="2.0\img\demo\ico\128\Cofigure.png" />
+    <Content Include="2.0\img\demo\ico\128\Edit.png" />
+    <Content Include="2.0\img\demo\ico\128\Home.png" />
+    <Content Include="2.0\img\demo\ico\128\Info.png" />
+    <Content Include="2.0\img\demo\ico\128\Organize.png" />
+    <Content Include="2.0\img\demo\ico\128\Package.png" />
+    <Content Include="2.0\img\demo\ico\128\User-Male.png" />
+    <Content Include="2.0\img\demo\ico\16\compass.png" />
+    <Content Include="2.0\img\demo\ico\16\db.png" />
+    <Content Include="2.0\img\demo\ico\16\home.png" />
+    <Content Include="2.0\img\demo\ico\16\setup.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_1.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_2.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_2_h.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_3.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_4.png" />
+    <Content Include="2.0\img\demo\ico\32\icon_5.png" />
+    <Content Include="2.0\img\demo\ico\48\ibooks_icon copy.jpg" />
+    <Content Include="2.0\img\demo\ico\48\icon_1.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_1_h.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_2.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_2_h.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_3.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_4.png" />
+    <Content Include="2.0\img\demo\ico\48\icon_5.png" />
+    <Content Include="2.0\img\demo\ico\48\nav_apps_icon.png" />
+    <Content Include="2.0\img\demo\ico\48\nav_documents_icon.png" />
+    <Content Include="2.0\img\demo\ico\48\nav_icon_reminders.png" />
+    <Content Include="2.0\img\demo\ico\48\nav_icon_safari.png" />
+    <Content Include="2.0\img\demo\ico\48\nav_photostream_icon.png" />
+    <Content Include="2.0\img\demo\ico\48\overview_calendar_icon.jpg" />
+    <Content Include="2.0\img\demo\ico\48\overview_contacts_icon.jpg" />
+    <Content Include="2.0\img\demo\ico\96\Address-Book.png" />
+    <Content Include="2.0\img\demo\ico\96\Book.png" />
+    <Content Include="2.0\img\demo\ico\96\Cofigure.png" />
+    <Content Include="2.0\img\demo\ico\96\Edit.png" />
+    <Content Include="2.0\img\demo\ico\96\Home.png" />
+    <Content Include="2.0\img\demo\ico\96\Info.png" />
+    <Content Include="2.0\img\demo\ico\96\Organize.png" />
+    <Content Include="2.0\img\demo\ico\96\Package.png" />
+    <Content Include="2.0\img\demo\ico\96\User-Male.png" />
+    <Content Include="2.0\img\demo\ico\apple.png" />
+    <Content Include="2.0\img\demo\ico\harddrive.png" />
+    <Content Include="2.0\img\demo\ico\home.png" />
+    <Content Include="2.0\img\demo\ico\ibooks_icon.jpg" />
+    <Content Include="2.0\img\demo\ico\nav_backup_icon.png" />
+    <Content Include="2.0\img\demo\ico\nav_fmf_icon.png" />
+    <Content Include="2.0\img\demo\ico\safari.png" />
+    <Content Include="2.0\img\demo\ico\tools.png" />
+    <Content Include="2.0\img\demo\lakebg.jpg" />
+    <Content Include="2.0\img\demo\silde1.jpg" />
+    <Content Include="2.0\img\demo\thumb-arc.jpg" />
+    <Content Include="2.0\img\demo\thumb-book.jpg" />
+    <Content Include="2.0\img\demo\thumb1-m.jpg" />
+    <Content Include="2.0\img\demo\thumb1-small.jpg" />
+    <Content Include="2.0\img\demo\thumb1.jpg" />
+    <Content Include="2.0\img\demo\thumb2-m.jpg" />
+    <Content Include="2.0\img\demo\thumb2-small.jpg" />
+    <Content Include="2.0\img\demo\thumb2.jpg" />
+    <Content Include="2.0\img\demo\thumb3-m.jpg" />
+    <Content Include="2.0\img\demo\thumb3-small.jpg" />
+    <Content Include="2.0\img\demo\thumb3.jpg" />
+    <Content Include="2.0\img\demo\thumb4-m.jpg" />
+    <Content Include="2.0\img\demo\thumb4-small.jpg" />
+    <Content Include="2.0\img\demo\thumb4.jpg" />
+    <Content Include="2.0\img\demo\thumb5-small.jpg" />
+    <Content Include="2.0\img\demo\thumb5.jpg" />
+    <Content Include="2.0\img\glyphicons-halflings-white.png" />
+    <Content Include="2.0\img\glyphicons-halflings.png" />
+    <Content Include="2.0\img\webui\bd\side-border.png" />
+    <Content Include="2.0\img\webui\bg\blackbg.png" />
+    <Content Include="2.0\img\webui\bg\blockbg.jpg" />
+    <Content Include="2.0\img\webui\bg\leatherbg.png" />
+    <Content Include="2.0\img\webui\bg\macbg-black.png" />
+    <Content Include="2.0\img\webui\bg\macbg-darker.png" />
+    <Content Include="2.0\img\webui\bg\macbg.png" />
+    <Content Include="2.0\img\webui\bg\noisebg-blue.jpg" />
+    <Content Include="2.0\img\webui\bg\noisebg-darker.png" />
+    <Content Include="2.0\img\webui\bg\noisebg-gradient.jpg" />
+    <Content Include="2.0\img\webui\bg\noisebg-yeallow.png" />
+    <Content Include="2.0\img\webui\bg\noisebg.png" />
+    <Content Include="2.0\img\webui\bg\silvergbg-anti.png" />
+    <Content Include="2.0\img\webui\bg\silvergbg.png" />
+    <Content Include="2.0\img\webui\bg\wallbg.jpg" />
+    <Content Include="2.0\img\webui\bg\woodbg-gray.jpg" />
+    <Content Include="2.0\img\webui\bg\woodbg-lighter.jpg" />
+    <Content Include="2.0\img\webui\bg\woodbg.png" />
+    <Content Include="2.0\img\webui\btn\btn-icons.png" />
+    <Content Include="2.0\img\webui\btn\gh-icons.png" />
+    <Content Include="2.0\img\webui\feed-shadow-large.png" />
+    <Content Include="2.0\img\webui\feed-shadow.png" />
+    <Content Include="2.0\img\webui\ico\morearrow.gif" />
+    <Content Include="2.0\img\webui\ico\status.gif" />
+    <Content Include="2.0\img\webui\toolbar\anchor.png" />
+    <Content Include="2.0\img\webui\toolbar\badge.png" />
+    <Content Include="2.0\img\webui\toolbar\bg.png" />
+    <Content Include="2.0\img\webui\toolbar\chart.png" />
+    <Content Include="2.0\img\webui\toolbar\dashboard.png" />
+    <Content Include="2.0\img\webui\toolbar\gallery.png" />
+    <Content Include="2.0\img\webui\toolbar\modal.png" />
+    <Content Include="2.0\img\webui\toolbar\newspaper.png" />
+    <Content Include="2.0\img\webui\toolbar\pencil.png" />
+    <Content Include="2.0\img\webui\toolbar\space-dot.gif" />
+    <Content Include="2.0\img\webui\toolbar\tables.png" />
+    <Content Include="2.0\img\webui\toolbar\toolnav-bg.png" />
+    <Content Include="2.0\img\webui\vmenu-shadow-anti.png" />
+    <Content Include="2.0\img\webui\vmenu-shadow.png" />
+    <Content Include="2.0\index.html" />
+    <Content Include="2.0\js\bootstrap-tab.js" />
+    <Content Include="2.0\js\bootstrap.js" />
+    <Content Include="2.0\js\bootstrap.min.js" />
+    <Content Include="2.0\js\dataTables.js" />
+    <Content Include="2.0\js\dataTables.paging.js" />
+    <Content Include="2.0\js\html5.js" />
+    <Content Include="2.0\js\jquery.js" />
+    <Content Include="2.0\js\prettify.js" />
+    <Content Include="2.0\lists.html" />
+    <Content Include="2.0\sa-index.html" />
+    <Content Include="2.0\sa-index2.html" />
+    <Content Include="2.0\tables.html" />
+    <Content Include="2.0\test-flip.html" />
+    <Content Include="2.0\test.html" />
+    <Content Include="App_Data\InstalledPlugins.txt" />
+    <Content Include="Content\Default\editor.png" />
+    <Content Include="Content\Default\imagebrowser.png" />
+    <Content Include="Content\Default\indeterminate.gif" />
+    <Content Include="Content\Default\loading-image.gif" />
+    <Content Include="Content\Default\loading.gif" />
+    <Content Include="Content\Default\loading_2x.gif" />
+    <Content Include="Content\Default\slider-h.gif" />
+    <Content Include="Content\Default\slider-v.gif" />
+    <Content Include="Content\Default\sprite.png" />
+    <Content Include="Content\Default\sprite_2x.png" />
+    <Content Include="Content\examples-offline.css" />
+    <Content Include="Content\kendo.common.min.css" />
+    <Content Include="Content\kendo.default.min.css" />
+    <Content Include="Content\kendo.rtl.min.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap-responsive.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\data-tables.css" />
+    <Content Include="css\prettify.css" />
+    <Content Include="css\webui-admin.css" />
+    <Content Include="css\webui-menus.css" />
+    <Content Include="css\webui.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="ef命令.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="img\datatable\back_disabled.jpg" />
+    <Content Include="img\datatable\back_enabled.jpg" />
+    <Content Include="img\datatable\favicon.ico" />
+    <Content Include="img\datatable\forward_disabled.jpg" />
+    <Content Include="img\datatable\forward_enabled.jpg" />
+    <Content Include="img\datatable\sort_asc.png" />
+    <Content Include="img\datatable\sort_asc_disabled.png" />
+    <Content Include="img\datatable\sort_both.png" />
+    <Content Include="img\datatable\sort_desc.png" />
+    <Content Include="img\datatable\sort_desc_disabled.png" />
+    <Content Include="img\demo\banner.jpg" />
+    <Content Include="img\demo\chart.jpg" />
+    <Content Include="img\demo\dock\left_shelf.png" />
+    <Content Include="img\demo\dock\right_shelf.png" />
+    <Content Include="img\demo\dock\separator.png" />
+    <Content Include="img\demo\dock\shelf.png" />
+    <Content Include="img\demo\ico\128\Address-Book.png" />
+    <Content Include="img\demo\ico\128\Book.png" />
+    <Content Include="img\demo\ico\128\Cofigure.png" />
+    <Content Include="img\demo\ico\128\Edit.png" />
+    <Content Include="img\demo\ico\128\Home.png" />
+    <Content Include="img\demo\ico\128\Info.png" />
+    <Content Include="img\demo\ico\128\Organize.png" />
+    <Content Include="img\demo\ico\128\Package.png" />
+    <Content Include="img\demo\ico\128\User-Male.png" />
+    <Content Include="img\demo\ico\16\compass.png" />
+    <Content Include="img\demo\ico\16\db.png" />
+    <Content Include="img\demo\ico\16\home.png" />
+    <Content Include="img\demo\ico\16\setup.png" />
+    <Content Include="img\demo\ico\32\icon_1.png" />
+    <Content Include="img\demo\ico\32\icon_2.png" />
+    <Content Include="img\demo\ico\32\icon_2_h.png" />
+    <Content Include="img\demo\ico\32\icon_3.png" />
+    <Content Include="img\demo\ico\32\icon_4.png" />
+    <Content Include="img\demo\ico\32\icon_5.png" />
+    <Content Include="img\demo\ico\48\ibooks_icon copy.jpg" />
+    <Content Include="img\demo\ico\48\icon_1.png" />
+    <Content Include="img\demo\ico\48\icon_1_h.png" />
+    <Content Include="img\demo\ico\48\icon_2.png" />
+    <Content Include="img\demo\ico\48\icon_2_h.png" />
+    <Content Include="img\demo\ico\48\icon_3.png" />
+    <Content Include="img\demo\ico\48\icon_4.png" />
+    <Content Include="img\demo\ico\48\icon_5.png" />
+    <Content Include="img\demo\ico\48\nav_apps_icon.png" />
+    <Content Include="img\demo\ico\48\nav_documents_icon.png" />
+    <Content Include="img\demo\ico\48\nav_icon_reminders.png" />
+    <Content Include="img\demo\ico\48\nav_icon_safari.png" />
+    <Content Include="img\demo\ico\48\nav_photostream_icon.png" />
+    <Content Include="img\demo\ico\48\overview_calendar_icon.jpg" />
+    <Content Include="img\demo\ico\48\overview_contacts_icon.jpg" />
+    <Content Include="img\demo\ico\96\Address-Book.png" />
+    <Content Include="img\demo\ico\96\Book.png" />
+    <Content Include="img\demo\ico\96\Cofigure.png" />
+    <Content Include="img\demo\ico\96\Edit.png" />
+    <Content Include="img\demo\ico\96\Home.png" />
+    <Content Include="img\demo\ico\96\Info.png" />
+    <Content Include="img\demo\ico\96\Organize.png" />
+    <Content Include="img\demo\ico\96\Package.png" />
+    <Content Include="img\demo\ico\96\User-Male.png" />
+    <Content Include="img\demo\ico\apple.png" />
+    <Content Include="img\demo\ico\harddrive.png" />
+    <Content Include="img\demo\ico\home.png" />
+    <Content Include="img\demo\ico\ibooks_icon.jpg" />
+    <Content Include="img\demo\ico\nav_backup_icon.png" />
+    <Content Include="img\demo\ico\nav_fmf_icon.png" />
+    <Content Include="img\demo\ico\safari.png" />
+    <Content Include="img\demo\ico\tools.png" />
+    <Content Include="img\demo\lakebg.jpg" />
+    <Content Include="img\demo\silde1.jpg" />
+    <Content Include="img\demo\thumb-arc.jpg" />
+    <Content Include="img\demo\thumb-book.jpg" />
+    <Content Include="img\demo\thumb1-m.jpg" />
+    <Content Include="img\demo\thumb1-small.jpg" />
+    <Content Include="img\demo\thumb1.jpg" />
+    <Content Include="img\demo\thumb2-m.jpg" />
+    <Content Include="img\demo\thumb2-small.jpg" />
+    <Content Include="img\demo\thumb2.jpg" />
+    <Content Include="img\demo\thumb3-m.jpg" />
+    <Content Include="img\demo\thumb3-small.jpg" />
+    <Content Include="img\demo\thumb3.jpg" />
+    <Content Include="img\demo\thumb4-m.jpg" />
+    <Content Include="img\demo\thumb4-small.jpg" />
+    <Content Include="img\demo\thumb4.jpg" />
+    <Content Include="img\demo\thumb5-small.jpg" />
+    <Content Include="img\demo\thumb5.jpg" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
+    <Content Include="img\webui\bd\side-border.png" />
+    <Content Include="img\webui\bg\blackbg.png" />
+    <Content Include="img\webui\bg\blockbg.jpg" />
+    <Content Include="img\webui\bg\leatherbg.png" />
+    <Content Include="img\webui\bg\macbg-black.png" />
+    <Content Include="img\webui\bg\macbg-darker.png" />
+    <Content Include="img\webui\bg\macbg.png" />
+    <Content Include="img\webui\bg\noisebg-blue.jpg" />
+    <Content Include="img\webui\bg\noisebg-darker.png" />
+    <Content Include="img\webui\bg\noisebg-gradient.jpg" />
+    <Content Include="img\webui\bg\noisebg-yeallow.png" />
+    <Content Include="img\webui\bg\noisebg.png" />
+    <Content Include="img\webui\bg\silvergbg-anti.png" />
+    <Content Include="img\webui\bg\silvergbg.png" />
+    <Content Include="img\webui\bg\wallbg.jpg" />
+    <Content Include="img\webui\bg\woodbg-gray.jpg" />
+    <Content Include="img\webui\bg\woodbg-lighter.jpg" />
+    <Content Include="img\webui\bg\woodbg.png" />
+    <Content Include="img\webui\btn\btn-icons.png" />
+    <Content Include="img\webui\btn\gh-icons.png" />
+    <Content Include="img\webui\feed-shadow-large.png" />
+    <Content Include="img\webui\feed-shadow.png" />
+    <Content Include="img\webui\ico\morearrow.gif" />
+    <Content Include="img\webui\ico\status.gif" />
+    <Content Include="img\webui\toolbar\anchor.png" />
+    <Content Include="img\webui\toolbar\badge.png" />
+    <Content Include="img\webui\toolbar\bg.png" />
+    <Content Include="img\webui\toolbar\chart.png" />
+    <Content Include="img\webui\toolbar\dashboard.png" />
+    <Content Include="img\webui\toolbar\gallery.png" />
+    <Content Include="img\webui\toolbar\modal.png" />
+    <Content Include="img\webui\toolbar\newspaper.png" />
+    <Content Include="img\webui\toolbar\pencil.png" />
+    <Content Include="img\webui\toolbar\space-dot.gif" />
+    <Content Include="img\webui\toolbar\tables.png" />
+    <Content Include="img\webui\toolbar\toolnav-bg.png" />
+    <Content Include="img\webui\vmenu-shadow-anti.png" />
+    <Content Include="img\webui\vmenu-shadow.png" />
+    <Content Include="Script\CCNF\CCNF.Ajax.js" />
+    <Content Include="Script\CCNF\CCNF.Map.App.js" />
+    <Content Include="Script\CCNF\CCNF.Map.js" />
+    <Content Include="Script\CCNF\CCNF.Pager.js" />
+    <Content Include="Script\CCNF\CCNF.Select.js" />
+    <Content Include="Script\CCNF\CCNF.Uploadify.js" />
+    <Content Include="Script\CCNF\CCNF.Validate.js" />
+    <Content Include="Script\CCNF\CCNF.wbox.js" />
+    <Content Include="Script\jquery-1.7.2.min.js" />
+    <Content Include="Script\jquery.validate.js" />
+    <Content Include="Script\jquery.validate.min.js" />
+    <Content Include="Script\js\bootstrap-tab.js" />
+    <Content Include="Script\js\bootstrap.js" />
+    <Content Include="Script\js\bootstrap.min.js" />
+    <Content Include="Script\js\dataTables.js" />
+    <Content Include="Script\js\dataTables.paging.js" />
+    <Content Include="Script\js\html5.js" />
+    <Content Include="Script\js\jquery.js" />
+    <Content Include="Script\js\prettify.js" />
+    <Content Include="Script\kendoui\console.js" />
+    <Content Include="Script\kendoui\kendo.web.min.js" />
+    <Content Include="Script\Mem\Mem.Common.js" />
+    <Content Include="Uploadify\Change Log.txt" />
+    <Content Include="Uploadify\jquery.uploadify.js" />
+    <Content Include="Uploadify\jquery.uploadify.min.js" />
+    <Content Include="Uploadify\license.txt" />
+    <Content Include="Uploadify\uploadify-cancel.png" />
+    <Content Include="Uploadify\uploadify.css" />
+    <Content Include="Uploadify\uploadify.swf" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="2.0\img\demo\.svn\props\" />
+    <Folder Include="2.0\img\demo\.svn\tmp\prop-base\" />
+    <Folder Include="2.0\img\demo\.svn\tmp\props\" />
+    <Folder Include="2.0\img\demo\.svn\tmp\text-base\" />
+    <Folder Include="2.0\img\webui\bd\.svn\props\" />
+    <Folder Include="2.0\img\webui\bd\.svn\tmp\prop-base\" />
+    <Folder Include="2.0\img\webui\bd\.svn\tmp\props\" />
+    <Folder Include="2.0\img\webui\bd\.svn\tmp\text-base\" />
+    <Folder Include="2.0\img\webui\bg\.svn\props\" />
+    <Folder Include="2.0\img\webui\bg\.svn\tmp\prop-base\" />
+    <Folder Include="2.0\img\webui\bg\.svn\tmp\props\" />
+    <Folder Include="2.0\img\webui\bg\.svn\tmp\text-base\" />
+    <Folder Include="2.0\img\webui\btn\.svn\props\" />
+    <Folder Include="2.0\img\webui\btn\.svn\tmp\prop-base\" />
+    <Folder Include="2.0\img\webui\btn\.svn\tmp\props\" />
+    <Folder Include="2.0\img\webui\btn\.svn\tmp\text-base\" />
+    <Folder Include="2.0\img\webui\toolbar\.svn\props\" />
+    <Folder Include="2.0\img\webui\toolbar\.svn\tmp\prop-base\" />
+    <Folder Include="2.0\img\webui\toolbar\.svn\tmp\props\" />
+    <Folder Include="2.0\img\webui\toolbar\.svn\tmp\text-base\" />
+    <Folder Include="img\demo\.svn\props\" />
+    <Folder Include="img\demo\.svn\tmp\prop-base\" />
+    <Folder Include="img\demo\.svn\tmp\props\" />
+    <Folder Include="img\demo\.svn\tmp\text-base\" />
+    <Folder Include="img\webui\bd\.svn\props\" />
+    <Folder Include="img\webui\bd\.svn\tmp\prop-base\" />
+    <Folder Include="img\webui\bd\.svn\tmp\props\" />
+    <Folder Include="img\webui\bd\.svn\tmp\text-base\" />
+    <Folder Include="img\webui\bg\.svn\props\" />
+    <Folder Include="img\webui\bg\.svn\tmp\prop-base\" />
+    <Folder Include="img\webui\bg\.svn\tmp\props\" />
+    <Folder Include="img\webui\bg\.svn\tmp\text-base\" />
+    <Folder Include="img\webui\btn\.svn\props\" />
+    <Folder Include="img\webui\btn\.svn\tmp\prop-base\" />
+    <Folder Include="img\webui\btn\.svn\tmp\props\" />
+    <Folder Include="img\webui\btn\.svn\tmp\text-base\" />
+    <Folder Include="img\webui\toolbar\.svn\props\" />
+    <Folder Include="img\webui\toolbar\.svn\tmp\prop-base\" />
+    <Folder Include="img\webui\toolbar\.svn\tmp\props\" />
+    <Folder Include="img\webui\toolbar\.svn\tmp\text-base\" />
+    <Folder Include="Plugins\bin\" />
+    <Folder Include="Upload\Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mem.Core\Mem.Core.csproj">
+      <Project>{48ee622d-1c74-463b-ad78-e13f2b1b8403}</Project>
+      <Name>Mem.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mem.Data\Mem.Data.csproj">
+      <Project>{db4dce19-2d69-4535-aa39-b1bb58942b9d}</Project>
+      <Name>Mem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mem.Framework\Mem.Framework.csproj">
+      <Project>{62ff851f-a116-41f1-9715-e99ebe7ddf5c}</Project>
+      <Name>Mem.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mem.Service\Mem.Service.csproj">
+      <Project>{ce0a7b21-28de-4c21-a61a-06b24d7b77c9}</Project>
+      <Name>Mem.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Script\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Left.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\.DS_Store" />
+    <Content Include="img\datatable\.DS_Store" />
+    <Content Include="img\datatable\Sorting icons.psd" />
+    <Content Include="img\demo\.DS_Store" />
+    <Content Include="img\demo\.svn\all-wcprops" />
+    <Content Include="img\demo\.svn\dir-prop-base" />
+    <Content Include="img\demo\.svn\entries" />
+    <Content Include="img\demo\.svn\prop-base\thumb-book.jpg.svn-base" />
+    <Content Include="img\demo\.svn\prop-base\thumb1.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\prop-base\thumb11.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\prop-base\thumb12.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\prop-base\thumb13.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\prop-base\thumb2.jpg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb-book.jpg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb1.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb11.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb12.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb13.jpeg.svn-base" />
+    <Content Include="img\demo\.svn\text-base\thumb2.jpg.svn-base" />
+    <Content Include="img\demo\dock\.DS_Store" />
+    <Content Include="img\demo\ico\.DS_Store" />
+    <Content Include="img\demo\ico\128\.DS_Store" />
+    <Content Include="img\demo\ico\16\.DS_Store" />
+    <Content Include="img\demo\ico\48\.DS_Store" />
+    <Content Include="img\demo\ico\96\.DS_Store" />
+    <Content Include="img\webui\.DS_Store" />
+    <Content Include="img\webui\bd\.DS_Store" />
+    <Content Include="img\webui\bd\.svn\all-wcprops" />
+    <Content Include="img\webui\bd\.svn\dir-prop-base" />
+    <Content Include="img\webui\bd\.svn\entries" />
+    <Content Include="img\webui\bd\.svn\prop-base\side-border.png.svn-base" />
+    <Content Include="img\webui\bd\.svn\text-base\side-border.png.svn-base" />
+    <Content Include="img\webui\bg\.DS_Store" />
+    <Content Include="img\webui\bg\.svn\all-wcprops" />
+    <Content Include="img\webui\bg\.svn\dir-prop-base" />
+    <Content Include="img\webui\bg\.svn\entries" />
+    <Content Include="img\webui\bg\.svn\prop-base\.DS_Store.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\gray-bg1.jpg.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\mac-bg.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\mac-bg1.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\mac-bg2.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\noise-bg1.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\noise-bg2.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\noise-bg3.jpg.svn-base" />
+    <Content Include="img\webui\bg\.svn\prop-base\wood-bg1.jpg.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\.DS_Store.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\gray-bg1.jpg.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\mac-bg.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\mac-bg1.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\mac-bg2.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\noise-bg1.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\noise-bg2.png.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\noise-bg3.jpg.svn-base" />
+    <Content Include="img\webui\bg\.svn\text-base\wood-bg1.jpg.svn-base" />
+    <Content Include="img\webui\btn\.DS_Store" />
+    <Content Include="img\webui\btn\.svn\all-wcprops" />
+    <Content Include="img\webui\btn\.svn\dir-prop-base" />
+    <Content Include="img\webui\btn\.svn\entries" />
+    <Content Include="img\webui\btn\.svn\prop-base\btn-icons.png.svn-base" />
+    <Content Include="img\webui\btn\.svn\prop-base\gh-icons.png.svn-base" />
+    <Content Include="img\webui\btn\.svn\text-base\btn-icons.png.svn-base" />
+    <Content Include="img\webui\btn\.svn\text-base\gh-icons.png.svn-base" />
+    <Content Include="img\webui\ico\.DS_Store" />
+    <Content Include="img\webui\toolbar\.svn\all-wcprops" />
+    <Content Include="img\webui\toolbar\.svn\dir-prop-base" />
+    <Content Include="img\webui\toolbar\.svn\entries" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\anchor.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\badge.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\bg.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\chart.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\dashboard.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\gallery.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\modal.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\newspaper.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\pencil.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\space-dot.gif.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\tables.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\prop-base\toolnav-bg.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\anchor.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\badge.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\bg.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\chart.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\dashboard.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\gallery.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\modal.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\newspaper.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\pencil.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\space-dot.gif.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\tables.png.svn-base" />
+    <Content Include="img\webui\toolbar\.svn\text-base\toolnav-bg.png.svn-base" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Settings\TopMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Settings\AddSiteMenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_right.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Uploadify\check-exists.php" />
+    <Content Include="Uploadify\index.php" />
+    <Content Include="Uploadify\uploadify.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Common\UploadImage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Settings\SiteMenuList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2.0\.DS_Store" />
+    <Content Include="2.0\css\.DS_Store" />
+    <Content Include="2.0\img\.DS_Store" />
+    <Content Include="2.0\img\datatable\.DS_Store" />
+    <Content Include="2.0\img\datatable\Sorting icons.psd" />
+    <Content Include="2.0\img\demo\.DS_Store" />
+    <Content Include="2.0\img\demo\.svn\all-wcprops" />
+    <Content Include="2.0\img\demo\.svn\dir-prop-base" />
+    <Content Include="2.0\img\demo\.svn\entries" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb-book.jpg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb1.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb11.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb12.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb13.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\prop-base\thumb2.jpg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb-book.jpg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb1.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb11.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb12.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb13.jpeg.svn-base" />
+    <Content Include="2.0\img\demo\.svn\text-base\thumb2.jpg.svn-base" />
+    <Content Include="2.0\img\demo\dock\.DS_Store" />
+    <Content Include="2.0\img\demo\ico\.DS_Store" />
+    <Content Include="2.0\img\demo\ico\128\.DS_Store" />
+    <Content Include="2.0\img\demo\ico\16\.DS_Store" />
+    <Content Include="2.0\img\demo\ico\48\.DS_Store" />
+    <Content Include="2.0\img\demo\ico\96\.DS_Store" />
+    <Content Include="2.0\img\webui\.DS_Store" />
+    <Content Include="2.0\img\webui\bd\.DS_Store" />
+    <Content Include="2.0\img\webui\bd\.svn\all-wcprops" />
+    <Content Include="2.0\img\webui\bd\.svn\dir-prop-base" />
+    <Content Include="2.0\img\webui\bd\.svn\entries" />
+    <Content Include="2.0\img\webui\bd\.svn\prop-base\side-border.png.svn-base" />
+    <Content Include="2.0\img\webui\bd\.svn\text-base\side-border.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.DS_Store" />
+    <Content Include="2.0\img\webui\bg\.svn\all-wcprops" />
+    <Content Include="2.0\img\webui\bg\.svn\dir-prop-base" />
+    <Content Include="2.0\img\webui\bg\.svn\entries" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\.DS_Store.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\gray-bg1.jpg.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\mac-bg.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\mac-bg1.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\mac-bg2.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\noise-bg1.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\noise-bg2.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\noise-bg3.jpg.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\prop-base\wood-bg1.jpg.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\.DS_Store.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\gray-bg1.jpg.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\mac-bg.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\mac-bg1.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\mac-bg2.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\noise-bg1.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\noise-bg2.png.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\noise-bg3.jpg.svn-base" />
+    <Content Include="2.0\img\webui\bg\.svn\text-base\wood-bg1.jpg.svn-base" />
+    <Content Include="2.0\img\webui\btn\.DS_Store" />
+    <Content Include="2.0\img\webui\btn\.svn\all-wcprops" />
+    <Content Include="2.0\img\webui\btn\.svn\dir-prop-base" />
+    <Content Include="2.0\img\webui\btn\.svn\entries" />
+    <Content Include="2.0\img\webui\btn\.svn\prop-base\btn-icons.png.svn-base" />
+    <Content Include="2.0\img\webui\btn\.svn\prop-base\gh-icons.png.svn-base" />
+    <Content Include="2.0\img\webui\btn\.svn\text-base\btn-icons.png.svn-base" />
+    <Content Include="2.0\img\webui\btn\.svn\text-base\gh-icons.png.svn-base" />
+    <Content Include="2.0\img\webui\ico\.DS_Store" />
+    <Content Include="2.0\img\webui\toolbar\.svn\all-wcprops" />
+    <Content Include="2.0\img\webui\toolbar\.svn\dir-prop-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\entries" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\anchor.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\badge.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\bg.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\chart.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\dashboard.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\gallery.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\modal.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\newspaper.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\pencil.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\space-dot.gif.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\tables.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\prop-base\toolnav-bg.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\anchor.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\badge.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\bg.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\chart.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\dashboard.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\gallery.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\modal.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\newspaper.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\pencil.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\space-dot.gif.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\tables.png.svn-base" />
+    <Content Include="2.0\img\webui\toolbar\.svn\text-base\toolnav-bg.png.svn-base" />
+    <Content Include="2.0\js\.DS_Store" />
+    <None Include="Properties\PublishProfiles\memtosql.pubxml" />
+    <Content Include="Views\Settings\EditSiteMenu.cshtml" />
+    <Content Include="Views\Settings\UsersList.cshtml" />
+    <Content Include="Views\Settings\AuthoritiesManage.cshtml" />
+    <Content Include="Views\Settings\AddAuthoritiesClassfy.cshtml" />
+    <Content Include="Views\Settings\AddAuthorities.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19782</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5821/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

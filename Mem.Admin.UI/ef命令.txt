@@ -1,0 +1,9 @@
+Enable-Migrations -ContextTypeName "Mem.Data.DataContext" -ProjectName "Mem.Data" -StartUpProjectName "Mem.Admin.UI" -ConnectionStringName "DataContext" -Force
+
+Update-Database -Script -ProjectName "Mem.Data" -StartUpProjectName "Mem.Admin.UI" -ConnectionStringName "DataContext"  -Force
+
+
+Add-Migration -Name "InitialCreate"  -ProjectName "Mem.Data" -StartUpProjectName "Mem.Admin.UI" -ConnectionStringName "DataContext" -Force
+
+
+320008

@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Mem.Admin.UI.Models.Settings.AuthoritiesClassfyModel>
+@{
+    ViewBag.Title = "AuthoritiesManage";
+    Layout = "~/Views/Shared/_right.cshtml";
+}
+
+<div class="main bg-white">
+
+    <div class="toolbar bg-mac bordered-b">
+
+        <div class="btn-toolbar">
+
+
+
+            <div class="btn-group">
+                <a href="#" class="btn"><i class="icon-search"></i>添加</a>
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);" onclick="AddAuthoritiesClassfyIframe()">权限分组</a></li>
+                    <li><a href="javascript:void(0)" onclick="AddAuthoritiesIframe()">详细权限</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn"><i class="icon-search"></i>查询 </a>
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">自定义查询</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="btn-group">
+
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">批量操作 
+                                       
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">编辑</a></li>
+                    <li><a href="#">删除</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">标引主题词</a></li>
+                </ul>
+
+            </div>
+            <div class="btn-group ">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">其它  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">添加到专题</a></li>
+                    <li><a href="#">打印报表</a></li>
+
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn "><i class="icon-folder-close "></i>归档</a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div style="margin: 10px;">
+        <div class="content group" id="content">
+
+            <fieldset>
+                <legend>权限列表</legend>
+                @foreach (var info in Model)
+                {
+                    <fieldset>
+                        <legend>@info.Name <span class="auSpan"><a href="#"><i class="icon-edit"></i>编辑</a><a href="#"><i class="icon-remove"></i>删除</a></span></legend>
+                        <table class="items">
+                            <colgroup>
+                                <col id="Col1">
+                                <col id="Col2">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">权限名</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var authoritiesInfo in info.authoritiesList)
+                                {
+                                    <tr>
+                                        <td>@authoritiesInfo.Name</td>
+                                        <td style="width: 60px;">
+                                            <a href="#"><i class="icon-edit"></i>编辑</a>
+                                        </td>
+                                        <td style="width: 60px;">
+                                            <a href="#"><i class="icon-remove"></i>删除</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </fieldset>
+                }
+            </fieldset>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+
+    /*
+    弹出添加权限分组框
+     */
+    function AddAuthoritiesClassfyIframe() {
+        $.layer({
+            type: 2,
+            title: '添加权限分组',
+            iframe: { src: '/Settings/AddAuthoritiesClassfy' },
+            area: ['600px', '500px'],
+            offset: ['100px', '']
+        });
+
+    }
+
+    /*
+    弹出添加详细权限边框
+     */
+    function AddAuthoritiesIframe() {
+        $.layer({
+            type: 2,
+            title: '添加详细权限',
+            iframe: { src: '/Settings/AddAuthorities' },
+            area: ['600px', '500px'],
+            offset: ['100px', '']
+        });
+
+    }
+
+
+</script>
+

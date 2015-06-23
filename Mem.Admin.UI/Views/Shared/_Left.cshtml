@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "锐神管理系统";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-admin container-vbar">
+    <div class="sidebar" id="siteMenu">
+        <div class="vbar bg-gray-darker">
+            <!--加载二级菜单栏-->
+            <ul class="toolbar-stacked" id="toolbarMain">
+            </ul>
+            <!--结束加载二级菜单栏-->
+        </div>
+
+        <div class="content bg-mac" id="thirdMenuDiv">
+            <div class="toolbar bordered-b">
+                <h2 id="secondName"></h2>
+            </div>
+
+            <aside class="menubar menubar-alpha">
+                <ul class="vmenu" id="thirdMenu">
+                </ul>
+            </aside>
+        </div>
+
+
+    </div>
+    <div class="main bg-white">
+        <iframe id="rightContent" name="rightContent" onload='SetCwinHeight(this);' scrolling="auto" src="/Settings/AddSiteMenu" style="border: none;" width="100%" frameborder="0"></iframe>
+    </div>
+
+    @RenderBody()
+
+
+</div>
+
+<script type="text/javascript" src="/Script/js/jquery.js"></script>
+<script type="text/javascript" src="/Script/js/bootstrap.js"></script>
+<script type="text/javascript" src="/Script/js/prettify.js"></script>
+<script type="text/javascript" src="/Script/js/dataTables.js"></script>
+
+<script type="text/javascript">
+    //iframe高度自适应
+    function SetCwinHeight(obj) {
+        var cwin = obj;
+        var cliHeight = document.documentElement.clientHeight;
+        if (document.getElementById) {
+            if (cwin && !window.opera) {
+                if (cwin.contentDocument && cwin.contentDocument.body.offsetHeight)
+                    cwin.height = cliHeight + 20; //FF NS
+                else if (cwin.Document && cwin.Document.body.scrollHeight)
+                    cwin.height = cliHeight + 10; //IE
+            }
+            else {
+                if (cwin.contentWindow.document && cwin.contentWindow.document.body.scrollHeight)
+                    cwin.height = cliHeight; //Opera
+            }
+        }
+        if (cliHeight < cwin.height) {
+            $("#rightContent").attr("scrolling", "yes");
+        }
+    }
+
+
+    /*
+     *加载二级菜单栏
+     *#parentId 栏目父Id
+     */
+    function LoadSecondMenu(parentId) {
+
+        $.ajax({
+            type: 'POST',
+            url: '/Settings/GetMenuJsonByParentId',
+            async: true,
+            dataType: 'json',
+            data: 'parentId=' + parentId,
+            success: function (data) {
+                $("#toolbarMain").html("");
+
+                //MVC中返回参数应该返回一个string，如果返回actionresult 不会直接解析的
+                $.each(data.menu, function (idx, item) {
+                    var html = "<li><a href=\"javascript:void(0)\" onclick=\"LoadThirdMenu(" + item.Id + ",'"+item.Name+"')\"><img src=\"" + item.ImageUrl + "\" alt=\"\"><p>" + item.Name + "</p></a></li>";
+
+                    $("#toolbarMain").append(html);
+
+                    //加载三级菜单
+                    if (idx == 0) {
+                        LoadThirdMenu(item.Id,item.Name);
+                    }
+                    
+                });
+
+                if (data.menu.length == 0) {
+
+                }
+            },
+            error: function (ex) {
+                alert('操作错误..' + ex);
+            }
+        });
+    }
+
+    /*
+    *加载三级菜单栏
+    *#parentId 栏目父Id
+    */
+    function LoadThirdMenu(parentId,secondName) {
+        $.ajax({
+            type: 'POST',
+            url: '/Settings/GetMenuJsonByParentId',
+            async: true,
+            dataType: 'json',
+            data: 'parentId=' + parentId,
+            success: function (data) {
+                $("#thirdMenu").html("");
+
+                //MVC中返回参数应该返回一个string，如果返回actionresult 不会直接解析的
+                $.each(data.menu, function (idx, item) {
+                    var html = "";
+
+                    if (idx == 0) {
+                        html = "<li id=\"testt\"  class=\"active\"><a id=\"" + idx + "\" onclick=\"ChangeThreeTheme(this)\" href=\"" + item.SrcUrl + "\" target=\"rightContent\">" + item.Name + "</a></li>";
+                        $("#rightContent").attr("src", item.SrcUrl);
+                    } else {
+                        html = "<li><a onclick=\"ChangeThreeTheme(this)\" href=\"" + item.SrcUrl + "\" target=\"rightContent\">" + item.Name + "</a></li>";
+                    }
+                    $("#secondName").text(secondName);
+                    $("#thirdMenu").append(html);
+                });
+            },
+            error: function (ex) {
+                alert('操作错误..' + ex);
+            }
+        });
+    }
+
+    /*
+     *点击三级菜单变色，改变其样式
+     */
+    function ChangeThreeTheme(obj) {
+
+        $("#thirdMenu .arrow").remove();
+
+        $("#thirdMenu .active").removeClass("active");
+
+        //添加相应点击的样式
+        $(obj).parent().addClass("active");
+
+      
+    }
+
+    LoadSecondMenu(6);
+
+</script>
+
+
+
+
+

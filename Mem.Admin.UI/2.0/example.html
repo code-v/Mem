@@ -1,0 +1,677 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Examples WebUI 2.0</title>
+
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="css/prettify.css" rel="stylesheet" type="text/css">
+
+<link href="css/webui.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="padding-top:90px;">
+	<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://code.google.com/webui-framework">WebUI FrameWork</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="index.html">OverView</a></li>
+              <li><a href="menus.html">Menus</a></li>
+              <li><a href="lists.html">Lists</a></li>
+              <li><a href="colors.html">Colors</a></li>
+              <li><a href="forms.html">Forms</a></li>
+              <li><a href="buttons.html">Tables</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="wedgits.html">Wedgits</a></li>
+              
+            </ul>
+            <ul class="nav pull-right">
+            	<li><a href="#">WelCome WebUI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  <div class="container" >  
+    <header class="margin20-b">
+    	<h1>WebUI FrameWork 2.0 <small>Smart Framework With Bootstrap</small></h1>
+        <div class="menubar menubar-large  margin10-t">
+        	<div class="container">	
+                <ul class="menu pull-left">
+                    <li><a href="#"><i class="icon-adjust"></i>&nbsp;Home&nbsp;</a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">&nbsp;Pages</a></li>
+                    <li><a href="#">About</a></li>
+                    
+                </ul>
+                
+                
+				
+                
+            	<btn><a href="#" class="btn btn-alpha pull-right"><i class="icon-search"></i></a></li>
+           		 
+                 <form class="menubar-search pull-right"><input type="text" class="search-query" placeholder="查找"></form>           
+            
+            </div>
+            
+        </div>
+        
+    </header>
+    
+    <section>
+    	<div class="row">
+        	<div class="span8">
+            	<h2>WebUI 默认文章样式</h2>
+                <p>只需要在文章的div标签上添加 <code>class="article"</code>即可，标题默认使用<code>&lt;h2&gt;</code>标签,副标题使用<code>&lt;h6&gt;</code>标签</p>
+            	<article  class="font14 well">
+                 	 <div class="article">
+                        
+                 		<h2>世界首个无线充电智能手机正式发售</h2>
+                        <h6>2011年8月6日 8:20  &nbsp;&nbsp;&nbsp;&nbsp;中国新闻网 <a href="#" class="blue">我要评论(1)</a></h6>
+                        <p>日本最大电信运营商NTT Docomo联合夏普于上周末正式发售了世界首个自带无线充电功能的智能手机&quot;AQUOS PHONE f SH-13C&quot;。这款智能机运行Android 2.3操作系统，产品自身附带夏普&quot;Qi&quot;无线充电器&quot;Wireless Charger SH01&quot;，将手机置于其上即可充电，无需连接任何线缆。</p>
+                        <p> 同时该机附带IPX5/IPX7级别的防水功能和IP5X级别的防尘功能，作为典型的日系手机还拥有其他许多同类产品不再具备的红外通信功能。产品采用一块3.7英寸夏普制qHD（分辨率960*540）触控屏。采用800万像素CMOS摄像头，可进行720p MP4影片录制。硬件配置方面，CPU为高通MSM8255 1GHz，内置512MB RAM和2GB ROM，支持最大32GB的microSD卡扩展，支持802.11 b/g/n WiFi和GSM/WCDMA/HSDPA。</p>
+                        <p> 这款手机外形方面仍然是夏普一贯的设计风格，尺寸仅为119*60*10.9mm，最厚处约11.5mm，重量约121g，有3种颜色（黑、白、粉）外壳的型号可选。 </p>
+                        <p><a href="#">日本最大电信运营商</a>NTT Docomo联合夏普于上周末正式发售了世界首个自带无线充电功能的智能手机&quot;AQUOS PHONE f SH-13C&quot;。这款智能机运行Android 2.3操作系统，产品自身附带夏普&quot;Qi&quot;无线充电器&quot;Wireless Charger SH01&quot;，将手机置于其上即可充电，无需连接任何线缆。</p>
+                         <span class="more"><a href="#">查看更多内容</a></span>
+                 	</div>
+          		</article>
+            
+            </div>
+            <div class="span4">
+            	<h2>WebUI 菜单</h2>
+                <p>由<code>class="menubar"</code>嵌套<code>class="menu"</code>或<code>class="vmenu"</code> </p>
+                <div class="menubar  menubar-borderd margin20-b "> 
+                 <ul class="vmenu"> 
+                    <li class="vmenu-header">菜单分类</li>
+                    <li class="active"><a href="#">回到首页</a></li>
+                    <li> <a href="#">看看软件</a></li>
+                    <li><a href="#">浏览项目&nbsp;&nbsp;<small>返回到首页...</small></a></li><!-- 在small标签前加入br标签可以使描述信息换行-->
+                    <li class="divider"></li>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">软件</a></li>
+                    <li><a href="#">项目</a></li>
+                   
+                </ul>
+                
+                </div>
+                
+                <p>menubar默认分大<code>menubar-large</code>中(默认)小<code>menubar-small</code>三种尺寸，深色<code>menubar-darker</code>，浅色(默认)两种色系.
+                	<code>menubar-divide</code>可以使菜单出现分隔符，下面是代码
+                </p>
+                
+                <pre class="prettyprint linenums">
+&lt;div class=&quot;menubar menubar-divide&quot;&gt;         
+   &lt;ul class=&quot;vmenu&quot;&gt;         
+   &lt;li &gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt; &lt;a href=&quot;#&quot;&gt;soft&lt;/a&gt;&lt;/li&gt;
+   ...        
+   &lt;/ul&gt;
+&lt;/div&gt;
+                </pre>
+           		
+                
+                <!--<div class="margin10-b">
+                	<h3>新闻速递</h3>
+                    <ul class="vlist">
+                                <li><a href="#" class="blue">央视记者采访溃业遭数殴(组图)</a></li>
+                                <li><a href="#">郑州巡防队阻止志愿者下水救人 称要打证,巡防队</a></li>
+                                <li><a href="#">郑州巡防队阻止志愿者下水救人 捞许 水救人 可证</a></li>
+                                <li><a href="#">央视记者采访溃坝化工企业遭数十殴(组图)</a></li>
+                               
+                    </ul>
+                </div>
+                -->
+            </div>
+        </div>
+        
+        
+            	<div class="row margin20-b">
+        	
+        	<div class="span8">
+            <h2>BootStrap 按钮</h2>
+            	<div class="btn-toolbar">
+                    <div class="btn-group">
+                        <a class="btn" href="#">添加</a>
+                        <a class="btn" href="#">编辑</a>
+                        <a class="btn btn-danger"  href="#">删除</a>
+                        <a class="btn" href="#"><i class="icon-search"></i>查找</a>
+                        <a class="btn" href="#">设置</a>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <a class="btn" href="#">1</a>
+                        <a class="btn" href="#">2</a>
+                        <a class="btn"  href="#">3</a>
+                        <a class="btn" href="#">4</a>
+                        <a class="btn" href="#">5</a>
+                    </div>
+                    
+                    <div class="btn-group">
+                   		<a class="btn btn-success" href="#">更多操作</a>  
+                        <a class="btn btn-success  dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+  							<li><a href="#">批量更新</a></li>	
+                            <li><a href="#">批量删除</a></li>	
+                            
+                            <li><a href="#">分类管理</a></li>	
+  						</ul>
+                    </div>
+                    
+                    <div class="btn-group">
+                   		 
+                        <a class="btn btn-primary  dropdown-toggle" data-toggle="dropdown" href="#">更多操作<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+  							<li><a href="#">批量更新</a></li>	
+                            <li><a href="#">批量删除</a></li>	
+                            <li><a href="#">分类管理</a></li>
+                            <li class="divider"></li>	
+                            <li><a href="#">高级设置</a></li>
+  						</ul>
+                    </div>
+                </div>
+            </div>
+            <div class="span4"></div>
+        </div>
+        
+        
+        <div>
+        	<h2>BootStrap默认表格样式</h2>
+        	<p>BootStrap默认的表格样式只需要在 <code>&lt;table&gt;</code>标签上添加 <code>class="table"</code>属性即可，另外
+            	还可以添加<code>class="table-striped"</code>(隔行变化颜色),<code>class="table-bordered"</code>(完整的单元格边框),
+                <code>class="table-condensed"</code>(表格行紧密布局)
+                            </p>
+                            
+                            
+            <ul class=" nav nav-tabs"  id="myTab">
+            	<li class="active"><a href="#defaultTable" data-toggle="tab">Default</a></li>
+  				<li><a href="#borderedTable" data-toggle="tab">Bordered</a></li>
+  				<li><a href="#condensed" data-toggle="tab">Condensed</a></li>
+            </ul>  
+            <div class="tab-content">
+            	<div class="tab-pane active" id="defaultTable">
+                      <table border="0" cellspacing="0" cellpadding="0" class="table table-striped">
+                          <thead >	
+                               <tr>
+                                 <th width="8%" scope="col">序号&nbsp;</th>
+                                 <th width="44%" scope="col">标题&nbsp;</th>
+                                 <th width="11%" scope="col">分类&nbsp;</th>
+                                 <th width="20%" scope="col">主题词&nbsp;</th>
+                                 <th width="17%" scope="col">操作&nbsp;</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>
+                                   <a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图)</a></li>
+                                 </td>
+                                 <td>国内</td>
+                                 <td>央视，企业</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                    <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>2</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                    <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>3</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                     <a href="#" class="btn  btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>4</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要作为典型的日系手机</a></td>
+                                 <td>地方</td>
+                                 <td>&nbsp;</td>
+                                 <td>
+                                     <a href="#" class="btn"><i class="icon-edit"></i>编辑</a>
+                                     <a href="#" class="btn btn-danger"><i class="icon-remove icon-white"></i>删除</a>
+                                 </td>
+                             </tr>
+                         </tbody>
+                       </table>
+                       <div class="pagination">
+                          <ul>
+                          	<li><a href="#">首页</a></li>
+                            
+                            <li class="active">
+                              <a href="#">1</a>
+                            </li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li class="disabled"><a href="#">...</a></li>
+                            
+                            <li><a href="#">末页</a></li>
+                          </ul>
+					</div>
+                </div>
+                <div class="tab-pane" id="borderedTable">
+               		 <table border="0" cellspacing="0" cellpadding="0" class="table table-bordered ">
+                          <thead>	
+                               <tr>
+                                 <th width="8%" scope="col">序号&nbsp;</th>
+                                 <th width="44%" scope="col">标题&nbsp;</th>
+                                 <th width="11%" scope="col">分类&nbsp;</th>
+                                 <th width="20%" scope="col">主题词&nbsp;</th>
+                                 <th width="17%" scope="col">操作&nbsp;</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>
+                                   <a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图)</a></li>
+                                 </td>
+                                 <td>国内</td>
+                                 <td>央视，企业</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                    <a href="#" class="btn btn-danger">删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>2</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                    <a href="#" class="btn  btn-danger">删除</a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>3</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                     <a href="#" class="btn  btn-danger">删除</a>
+                                  </td>
+                             </tr>
+                             
+                         </tbody>
+                       </table>
+                
+                </div>
+                <div class="tab-pane" id="condensed">
+                	<table border="0" cellspacing="0" cellpadding="0" class="table table-condensed">
+                          <thead>	
+                               <tr>
+                                 <th width="8%" scope="col">序号&nbsp;</th>
+                                 <th width="44%" scope="col">标题&nbsp;</th>
+                                 <th width="11%" scope="col">分类&nbsp;</th>
+                                 <th width="20%" scope="col">主题词&nbsp;</th>
+                                 <th width="17%" scope="col">操作&nbsp;</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                               <tr>
+                                 <td>1</td>
+                                 <td>
+                                   <a href="#">央视记者采访溃坝化工企业遭数十人围殴(组图)</a></li>
+                                 </td>
+                                 <td>国内</td>
+                                 <td>央视，企业</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                    <a href="#" class="btn btn-danger">删除</a>
+                                  </td>
+                             </tr>
+                               <tr>
+                                 <td>2</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>社会</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                    <a href="#" class="btn  btn-danger">删除</a>
+                                 </td>
+                             </tr>
+                               <tr>
+                                 <td>3</td>
+                                 <td><a href="#">郑州巡防队阻止志愿者下水救人 称要打捞许可证</a></td>
+                                 <td>地方</td>
+                                 <td>郑州，志愿者</td>
+                                 <td>
+                                    <a href="#" class="btn">编辑</a>
+                                     <a href="#" class="btn  btn-danger">删除</a>
+                                  </td>
+                             </tr>
+                               
+                         </tbody>
+                       </table>
+                
+                </div>
+            </div>              
+       
+         
+       </div>
+        
+        
+    </section>
+    
+    <section>
+		<div class="row">
+        	<div class="span3">
+            	<div class="alert">
+                	<a class="close">×</a>
+                    <h4 class="alert-heading">警告</h4>
+                	<p>这是一条警告消息！</p>
+                </div>
+            </div>
+            <div class="span3">
+            	<div class="alert alert-info">
+                	<a class="close">×</a>
+                    <h4 class="alert-heading">通知</h4>
+                	<p>这是一条普通消息！</p>
+                </div>
+            </div>
+            <div class="span3">
+            	<div class="alert alert-success">
+                	<a class="close">×</a>
+                    <h4 class="alert-heading">成功</h4>
+                	<p>这是一条成功的消息！</p>
+                </div>
+            </div>
+            <div class="span3">
+            	<div class="alert alert-error">
+                	<a class="close">×</a>
+                    <h4 class="alert-heading">错误</h4>
+                	<p>这是一条错误消息！</p>
+                </div>
+            </div>
+        </div>
+    
+    
+    	<div class="row">
+        	<div class="span6">
+            	<h2>BootStrap不带文字的缩略图列表</h2>
+                <p>Bootstrap支持的以最少的标签实现的缩略图列表</p>
+            	<ul class="thumbnails">
+  					<li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb1.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb5.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb1.jpg" alt=""></a>
+  					</li>
+                    
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb3.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb5.jpg"  alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb3.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb1.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb4.jpg" alt=""></a>
+  					</li>
+                    
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb3.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb4.jpg" alt=""></a>
+  					</li>
+                    <li class="span1">
+    					<a href="#" class="thumbnail"><img src="img/demo/thumb5.jpg" alt=""></a>
+  					</li>
+				</ul>
+            </div>
+            
+            <div class="span6">
+            	<h2>Bootstrap带描述信息的图片列表</h2>
+                <p>如果需要加上描述信息,可以加入大多数html标签，例如head,paragraph,button等</p>
+            	<ul class="thumbnails  thumbnails-alpha">
+  					<li class="span2">
+    					<div class="thumbnail">
+                        	<img src="img/demo/thumb1-m.jpg" alt="">
+                            <div class="caption">
+                        		<h5>图片标题</h5>
+                           		<p>作者，图片标题，拍摄时间等</p>
+                            </div>   
+                        </div>
+  					</li>
+                    <li class="span2">
+    					<div class="thumbnail">
+                        	<img src="img/demo/thumb2-m.jpg" alt="">
+                            <div class="caption">
+                        		<h5>图片标题</h5>
+                            	<p>图片信息描述，如图片标题，拍摄时间等</p>
+                            </div>
+                        </div>
+  					</li>
+                    <li class="span2">
+    					<div class="thumbnail">
+                        	<img src="img/demo/thumb3-m.jpg" alt="">
+                            <div class="caption">
+                        		<h5>图片</h5>
+                            	<p>图片信息描述，如拍摄时间等</p>
+                            </div>
+                        </div>
+  					</li>
+				</ul>
+            </div>
+        </div>
+        
+        
+    
+    </section>
+    
+    <section>
+    	<h2>Bootstrap 导航组件</h2>
+        <p></p>
+    	<div class="row">
+        	<div class="span4">
+            	<ul class="nav nav-pills">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li><a href="#">help</a></li>
+                 </ul>
+                
+            </div>
+            
+            <div class="span4">
+            	<ul class="nav nav-tabs">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li><a href="#">help</a></li>
+                 </ul>
+                
+            </div>
+            
+            <div class="span4">
+            	<ul class="nav nav-pills">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">help<b class="caret"></b></a>
+                         	<ul class="dropdown-menu">
+                            	<li><a href="#">action1</a></li>
+                                <li><a href="#">action2</a></li>
+                            </ul>
+                         </li>
+                         
+                 </ul>
+                
+            </div>
+        </div>
+        
+        
+        <div class="row">
+        	<div class="span4">
+            	<ul class="nav nav-pills nav-stacked">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li><a href="#">help</a></li>
+                 </ul>
+                
+            </div>
+            
+            <div class="span4">
+            	<ul class="nav nav-tabs nav-stacked">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li><a href="#">help</a></li>
+                 </ul>
+                
+            </div>
+            
+            <div class="span4">
+            	<ul class="nav nav-pills nav-stacked">
+                    	<li class="active"><a href="#">主页</a></li>
+                        <li><a href="#">软件</a></li>
+                        <li><a href="#">联系我们</a></li>
+                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">help<b class="caret"></b></a>
+                         	<ul class="dropdown-menu">
+                            	<li><a href="#">action1</a></li>
+                                <li><a href="#">action2</a></li>
+                            </ul>
+                         </li>
+                         
+                 </ul>
+                
+            </div>
+        </div>
+        
+
+            <div class="row">
+                <div class="span4">
+                	        <h2>Bootstrap 列表导航组件</h2>
+       						 <p></p>
+                	<div class="well">
+                		<ul class="nav nav-list">
+                        	<li class="nav-header">List header</li>
+                    		<li class="active"><a href="#">Home</a></li>
+                        	<li><a href="#">软件</a></li>
+                        	<li><a href="#">联系我们</a></li>
+                         	<li><a href="#">help</a></li>
+                 		</ul>
+                    </div>    
+                </div>
+                <div class="span8">
+                	        <h2>Bootstrap Labels</h2>
+       						<p></p>	
+                		<table class="table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>Labels</th>
+                                <th>Markup</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <span class="label">Default</span>
+                                </td>
+                                <td>
+                                  <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="label label-success">Success</span>
+                                </td>
+                                <td>
+                                  <code>&lt;span class="label label-success"&gt;New&lt;/span&gt;</code>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="label label-warning">Warning</span>
+                                </td>
+                                <td>
+                                  <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="label label-important">Important</span>
+                                </td>
+                                <td>
+                                  <code>&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="label label-info">Info</span>
+                                </td>
+                                <td>
+                                  <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                </div>
+            </div>
+    </section>
+    
+    <footer style="margin:40px 0 50px 0;padding:20px 0;border-top:1px solid #e5e5e5;">
+    	<p class="pull-right"><a href="#">返回顶端</a></p>
+        <p><a href="http://code.google.com/webui-framework">WebUI Framework 2.0</a> Designed For Developers Thanks For Twitter Bootstrap Framework </p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a></p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    </footer>
+    
+    
+  </div>   
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    
+    <script type="text/javascript">
+    	
+		$(function(){
+			prettyPrint();
+			
+			$('#myTab .active a').tab('show');
+			
+		});
+    
+    </script>
+    
+</body>
+</html>
+ 

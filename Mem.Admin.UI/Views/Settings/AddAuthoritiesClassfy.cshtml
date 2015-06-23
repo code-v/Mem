@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "AddAuthoritiesClassfy";
+    Layout = "~/Views/Shared/_right.cshtml";
+}
+<div style="width:99%;">
+    <div id="example" class="k-content" style="height: 100px;margin-left:20px; margin-top:50px;">
+        <form id="tickets" style="height: 100px;">
+            <ul>
+                <li>
+                    <label for="Name" class="required">分组名</label>
+                    <input type="text" id="Name" name="Name" class="k-textbox" placeholder="分组名" required validationmessage="请输入分组名" />
+                </li>
+
+                <li class="accept">
+                    <button class="k-button" type="submit">提交</button>
+                </li>
+                <li class="status"></li>
+            </ul>
+        </form>
+
+        <script>
+            $(document).ready(function () {
+                var data = [
+                "12 Angry Men",
+                "Il buono, il brutto, il cattivo.",
+                "Inception",
+                "One Flew Over the Cuckoo's Nest",
+                "Pulp Fiction",
+                "Schindler's List",
+                "The Dark Knight",
+                "The Godfather",
+                "The Godfather: Part II",
+                "The Shawshank Redemption"
+                ];
+          
+
+                $("#amount").kendoNumericTextBox();
+
+                var validator = $("#tickets").kendoValidator().data("kendoValidator"),
+                status = $(".status");
+
+                $("#tickets").submit(function (event) {
+                    event.preventDefault();
+                    if (validator.validate()) {
+                        $.ajax({
+                            type: 'POST',
+                            url: '/Settings/AddAuthoritiesClassfyInfo',
+                            async: true,
+                            dataType: 'json',
+                            data: $("#tickets").serialize(),
+                            success: function (data) {
+                                if (!data.Result) {
+                                    alert(data.msg);
+                                }
+                                else {
+                                    parent.location.reload();
+                                }
+                            },
+                            error: function (ex) {
+                                alert('操作错误..' + ex);
+                            }
+                        });
+                    } else {
+                        status.text("Oops! There is invalid data in the form.")
+                            .removeClass("valid")
+                            .addClass("invalid");
+                    }
+                });
+            });
+        </script>
+
+    </div>
+</div>
